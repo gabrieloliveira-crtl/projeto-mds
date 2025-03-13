@@ -6,6 +6,8 @@
     list-style: none;
     text-decoration: none;
 }
+
+
 header{
     box-shadow: 0px 10px 15px black;
 }
@@ -30,8 +32,65 @@ header nav ul li{
 
 header img{
     width: 90px;
-    border-radius: 200px;
-    
+    border-radius: 200px; 
 }
-
-
+/* ===========================================FUNCIONA TANTO NO CABEÇALHO COMO NO RODAPÉ =========================================== */
+ul li {
+    position: relative;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+    
+  /* Linha oculta inicialmente */
+  ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: #6bb39b; /* Cor da linha */
+    transform: scaleX(0); /* Oculta a linha inicialmente */
+    transform-origin: bottom right; /* Origem da animação */
+    transition: transform 0.3s; /* Animação suave */
+  }
+    
+  /* Define a animação ao passar o mouse */
+  ul li a:hover::after {
+    transform: scaleX(1); /* Expande a linha da direita para a esquerda */
+    transform-origin: bottom left;
+  }
+  
+  
+  /* Botão de Cadastre-se */
+  header button{
+    color: white;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+    border-radius: 10px;
+    width: 7vw;
+    height: 5vh;
+    margin-left: 30px;
+  }
+  
+  header button::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: white; 
+    transform: scaleX(0); 
+    transform-origin: bottom right; 
+    transition: transform 0.8s; 
+  }
+  
+  header button:hover::after{
+    transform: scaleX(1); 
+    transform-origin: bottom left;
+  }
