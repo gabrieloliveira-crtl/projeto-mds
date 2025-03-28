@@ -7,46 +7,44 @@
     text-decoration: none;
 }
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&family=Questrial&display=swap');
 
 
 header{
     box-shadow: 0px 10px 45px black;
     z-index: 999;
     position: sticky;
+    background-color: #95def5;
     left: 0;
-    height: 100px;
-    
+    padding: 10px;
+    height: 1px;
+     align-items: center;
 }
 header nav{
+    margin-left: 10px;
     display: flex;
-    gap: 100px;
-    justify-content: left;
+    gap: 80px;
+    text-align: center;
+    margin-top: 30px;
+    text-align: center;
     align-items: center;
-    background-color: #95def5;
-    
+    justify-content: space-around;
 }
-header nav ul{
-    display: flex;
-    gap: 30px;
-    padding: 30px;
-}
-header ul li a{
+header nav div a {
+  margin-left: 20px;
+  font-size: 19px;
   color: white;
-}
-header nav ul li{
-    padding: 2px;
-    border-radius: 6px;
-    font-size: 20px;
-    
-
+  text-decoration: none;
 }
 header h3{
   font-family: "Pacifico", cursive;
   color: white;
+  font-size: 25px;
+  margin-top: 7px;
 }
 
 header img{
-    width: 90px;
+    width: 60px;
     border-radius: 200px; 
 }
 /* ===========================================FUNCIONA TANTO NO CABEÇALHO COMO NO RODAPÉ =========================================== */
@@ -109,9 +107,39 @@ ul li {
     transform: scaleX(1); 
     transform-origin: bottom left;
   }
+  header i{
+    font-size: 20px;
+    color: white;
+    margin-left: 16px;
+  }
+  header .fa-whatsapp:hover{
+    transition: 1s;
+    color: green;
+  }
+  header .fa-envelope:hover{
+    transition: 1s; 
+    color: blue;
+  }
+  header .fa-phone:hover{
+    transition: 1s;
+    color: rgb(0, 221, 255);
+  }
 
 /* ========================================== Sessão 1 ======================================================== */
-.carousel-inner{
-  height: 31rem;
+.sect1{
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.509) 100%, rgba(0, 0, 0, 0.459) 3.77%), url(carrossel/medicina\ 2.jpg);
+  padding: 21vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
 }
-
+.sect1 h2{
+color: #95def5;
+font-size: 39px;
+}
+.sect1 p{
+  color: white;
+}
