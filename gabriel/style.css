@@ -143,22 +143,22 @@ font-size: 39px;
 .sect1 p{
   color: white;
 }
-/* =============================== Sessão 2 =================================================================== */
 
-.sect2{
-  padding: 6rem;
-  background-color: white;
-  display: flex;
-  height: 53rem;
-  align-items: center;
-  justify-content: space-between;
-}
-.cont-geral{
-  background-color: #95def5;
-  height: 600px;
-  width: 300px;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.353);
-  padding: 30px;
-  border-radius: 15px;
   
+/* ======================================== Sessão 2 =========================================================== */
+.sect2{
+  padding: 2rem;
+  height: 37rem;
+  background: linear-gradient(160deg, rgba(0, 0, 0, 0.548) 100%, rgba(0, 0, 0, 0.548) 3.77%), url(carrossel/medicina\ 3.jpg);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  align-items: center;
+}
+.sect2 div{
+  width: 17rem;
+  height: auto;
+  color: white;
+  font-weight: 500;
 }
