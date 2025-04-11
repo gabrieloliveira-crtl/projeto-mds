@@ -143,3 +143,20 @@ font-size: 39px;
 .sect1 p{
   color: white;
 }
+/* ======================================== Sessão 2 =========================================================== */
+.sect2{
+  padding: 2rem;
+  height: 37rem;
+  background: linear-gradient(160deg, rgba(0, 0, 0, 0.548) 100%, rgba(0, 0, 0, 0.548) 3.77%), url(carrossel/medicina\ 3.jpg);
+  background-position: right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+  align-items: center;
+}
+.sect2 div{
+  width: 17rem;
+  height: auto;
+  color: white;
+  font-weight: 500;
+}
