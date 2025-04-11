@@ -143,3 +143,22 @@ font-size: 39px;
 .sect1 p{
   color: white;
 }
+/* =============================== Sessão 2 =================================================================== */
+
+.sect2{
+  padding: 6rem;
+  background-color: white;
+  display: flex;
+  height: 53rem;
+  align-items: center;
+  justify-content: space-between;
+}
+.cont-geral{
+  background-color: #95def5;
+  height: 600px;
+  width: 300px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.353);
+  padding: 30px;
+  border-radius: 15px;
+  
+}
