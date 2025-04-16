@@ -177,16 +177,22 @@ footer{
   display: flex;
   padding: 30px;
   gap: 80px;
-
+  color: white;
+  text-align: left;
+  align-items: center;
   
 }
+footer .sobre-nos h4{
+  margin-left: 30px;
+}
+
 .unm{
   display: flex;
-  justify-content: left;
 }
 .unm img{
   width: 3em;
   height: 3em;
+  margin-left: -30px;
 }
 footer div{
   padding: 2rem;
@@ -206,4 +212,13 @@ footer div{
   font-size: 15px;
   padding: 10px;
   margin-left: 10px;
+}
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
 }
