@@ -1,0 +1,161 @@
+/* configuraçoes basicas para respiro do site */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos padrão */
+    box-sizing: border-box; /* Inclui bordas e padding no tamanho total dos elementos */
+    list-style: none; /* Remove estilos de lista */
+    text-decoration: none; /* Remove sublinhados de links */
+  }
+  
+  /* Importação de fontes externas */
+  @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&family=Questrial&display=swap');
+  
+  /* Estilo do cabeçalho */
+  header {
+    box-shadow: 0px 10px 45px black; /* Sombra do cabeçalho */
+    z-index: 999; /* Garante que o cabeçalho fique acima de outros elementos */
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar a página */
+    background-color: #95def5; /* Cor de fundo do cabeçalho */
+    left: 0; /* Alinha o cabeçalho à esquerda */
+    padding: 10px; /* Espaçamento interno */
+    height: 1px; /* Altura do cabeçalho */
+    align-items: center; /* Alinha os itens verticalmente */
+    text-align: center;
+  }
+  
+  /* Estilo da barra de navegação */
+  header nav {
+    margin-left: 10px; /* Espaçamento à esquerda */
+    display: flex; /* Define layout flexível */
+    gap: 80px; /* Espaçamento entre os itens */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 30px; /* Espaçamento superior */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-around; /* Distribui os itens uniformemente */
+  }
+  
+  /* Links dentro da barra de navegação */
+  header nav div a {
+    margin-left: 20px; /* Espaçamento à esquerda */
+    font-size: 19px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+  }
+  
+  /* Estilo do título no cabeçalho */
+  header h3 {
+    font-family: "Pacifico", cursive; /* Fonte personalizada */
+    color: white; /* Cor do texto */
+    font-size: 25px; /* Tamanho da fonte */
+    margin-top: 7px; /* Espaçamento superior */
+  }
+  
+  /* Estilo da imagem no cabeçalho */
+  header img {
+    width: 60px; /* Largura da imagem */
+    border-radius: 200px; /* Bordas arredondadas */
+  }
+  
+  /* Estilo para listas no cabeçalho e rodapé */
+  a {
+    position: relative; /* Define posição relativa */
+    padding: 10px 0; /* Espaçamento interno */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    transition: color 0.3s; /* Transição suave para a cor */
+  }
+  
+  /* Linha oculta inicialmente nos links */
+   a::after {
+    content: ""; /* Adiciona conteúdo vazio */
+    position: absolute; /* Define posição absoluta */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    bottom: 0; /* Alinha na parte inferior */
+    height: 2px; /* Altura da linha */
+    background-color: rgb(0, 204, 255); /* Cor da linha */
+    transform: scaleX(0); /* Oculta a linha inicialmente */
+    transform-origin: bottom right; /* Origem da animação */
+    transition: transform 0.3s; /* Animação suave */
+  }
+  
+  /* Animação ao passar o mouse nos links */
+   a:hover::after {
+    transform: scaleX(1); /* Expande a linha */
+    transform-origin: bottom left; /* Origem da expansão */
+  }
+  
+  /* Estilo do botão de cadastro */
+  header button {
+    color: white; /* Cor do texto */
+    position: relative; /* Define posição relativa */
+    background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    transition: color 0.3s; /* Transição suave para a cor */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 7vw; /* Largura do botão */
+    height: 5vh; /* Altura do botão */
+    margin-left: 30px; /* Espaçamento à esquerda */
+  }
+  
+  /* Linha animada no botão */
+  header button::after {
+    content: ""; /* Adiciona conteúdo vazio */
+    position: absolute; /* Define posição absoluta */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    bottom: 0; /* Alinha na parte inferior */
+    height: 10px; /* Altura da linha */
+    background-color: white; /* Cor da linha */
+    transform: scaleX(0); /* Oculta a linha inicialmente */
+    transform-origin: bottom right; /* Origem da animação */
+    transition: transform 0.8s; /* Animação suave */
+  }
+  
+  /* Animação ao passar o mouse no botão */
+  header button:hover::after {
+    transform: scaleX(1); /* Expande a linha */
+    transform-origin: bottom left; /* Origem da expansão */
+  }
+  
+  /* Estilo dos ícones no cabeçalho */
+  header i {
+    font-size: 20px; /* Tamanho dos ícones */
+    color: white; /* Cor dos ícones */
+    margin-left: 16px; /* Espaçamento à esquerda */
+  }
+  
+  /* Animação ao passar o mouse nos ícones */
+  header .fa-whatsapp:hover {
+    transition: 1s; /* Transição suave */
+    color: green; /* Cor ao passar o mouse */
+  }
+  header .fa-envelope:hover {
+    transition: 1s; /* Transição suave */
+    color: blue; /* Cor ao passar o mouse */
+  }
+  header .fa-phone:hover {
+    transition: 1s; /* Transição suave */
+    color: rgb(0, 221, 255); /* Cor ao passar o mouse */
+  }
+
+  /* Estilo da primeira seção */
+.secti1 {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.509) 100%, rgba(0, 0, 0, 0.459) 3.77%), url(img/estudantes-bolsa-estudo-medicina.webp); /* Fundo com gradiente e imagem */
+    padding: 21vw; /* Espaçamento interno */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-size: cover; /* Cobre todo o espaço disponível */
+    align-items: center; /* Alinha os itens verticalmente */
+    text-align: center; /* Centraliza o texto */
+    font-size: 30px; /* Tamanho da fonte */
+  }
+.secti1 h3 span{
+    font-size: 40px;
+    color: aqua;
+
+}
+.secti1 h3{
+    color: white;
+}
