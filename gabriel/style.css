@@ -185,7 +185,9 @@ footer{
 footer .sobre-nos h4{
   margin-left: 30px;
 }
-
+.div-paidopai{
+  display: flex;
+}
 .unm{
   display: flex;
 }
@@ -221,4 +223,12 @@ hr {
   margin-right: auto;
   border-style: inset;
   border-width: 1px;
+}
+.email{
+  background-color: gray;
+  border-radius: 10px;
+}
+.btn{
+  border-radius: 10px;
+  padding: 5px;
 }
