@@ -268,28 +268,34 @@ footer {
 
 /* Estilo do botão de envio */
 button[type="submit"] {
-  background-color: #067eca; /* Cor de fundo */
+  background-color: #5a81ce; /* Cor de fundo */
   color: white; /* Cor do texto */
   border: none; /* Remove borda */
   padding: 10px 20px; /* Espaçamento interno */
   border-radius: 5px; /* Bordas arredondadas */
   cursor: pointer; /* Define o cursor como ponteiro */
   font-size: 16px; /* Tamanho da fonte */
+  align-items: center;
 }
 
 /* Animação ao passar o mouse no botão */
 button[type="submit"]:hover {
-  background-color: #055a99; /* Cor ao passar o mouse */
+  background-color: #37548e; /* Cor ao passar o mouse */
   transition: background-color 0.3s; /* Transição suave */
 }
 
 
 #theme-toggle:hover {
-  background-color: #055a99; /* Cor ao passar o mouse */
+  background-color: #95def5; /* Cor ao passar o mouse */
   transition: background-color 0.3s; /* Transição suave */
 }
 
 
+
+#email1{
+  width: 25px;
+  margin-right: 10px;
+}
 
 
 

@@ -159,3 +159,128 @@
 .secti1 h3{
     color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo do rodapé */
+footer {
+  background-color: rgb(79, 79, 79); /* Cor de fundo */
+  padding: 30px; /* Espaçamento interno */
+  gap: 90px; /* Espaçamento entre os itens */
+  color: white; /* Cor do texto */
+}
+
+/* Estilo do container principal no rodapé */
+.div-pai {
+  display: flex; /* Define layout flexível */
+  align-items: center; /* Alinha os itens verticalmente */
+  margin-top: 20px; /* Espaçamento superior */
+  gap: 200px; /* Espaçamento entre os itens */
+}
+
+/* Linha horizontal no rodapé */
+.footer-line {
+  border: none; /* Remove borda padrão */
+  border-top: 2px solid #ccc; /* Linha superior */
+  margin: 20px 0; /* Espaçamento acima e abaixo */
+  width: 100%; /* Largura total */
+}
+
+/* Estilo do container do logo */
+.logo-container {
+  display: flex; /* Define layout flexível */
+  align-items: center; /* Alinha os itens verticalmente */
+  gap: 10px; /* Espaçamento entre os itens */
+}
+
+/* Estilo da imagem no logo */
+.logo-container img {
+  width: 60px; /* Largura da imagem */
+  height: auto; /* Altura automática */
+}
+
+/* Estilo do texto e ícones no logo */
+.text-and-icons {
+  display: flex; /* Define layout flexível */
+  flex-direction: column; /* Organiza os itens em coluna */
+  align-items: flex-start; /* Alinha os itens à esquerda */
+}
+
+/* Estilo do texto no logo */
+.text-and-icons p {
+  margin: 0; /* Remove margens padrão */
+  font-size: 16px; /* Tamanho da fonte */
+}
+
+/* Estilo dos ícones no logo */
+.icons {
+  display: flex; /* Define layout flexível */
+  gap: 10px; /* Espaçamento entre os ícones */
+  margin-top: 5px; /* Espaçamento superior */
+}
+
+/* Estilo individual dos ícones */
+.icons a i {
+  font-size: 20px; /* Tamanho dos ícones */
+  color: white; /* Cor dos ícones */
+}
+
+/* Estilo do campo de email */
+#email {
+  background-color: #cccccc; /* Cor de fundo */
+  color: #333; /* Cor do texto */
+  border: 1px solid #ccc; /* Borda */
+  padding: 10px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  width: 250px; /* Largura */
+}
+
+/* Estilo do botão de envio */
+button[type="submit"] {
+  background-color: #5a81ce; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Remove borda */
+  padding: 10px 20px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  font-size: 16px; /* Tamanho da fonte */
+  align-items: center;
+}
+
+/* Animação ao passar o mouse no botão */
+button[type="submit"]:hover {
+  background-color: #37548e; /* Cor ao passar o mouse */
+  transition: background-color 0.3s; /* Transição suave */
+}
+
+
+#theme-toggle:hover {
+  background-color: #95def5; /* Cor ao passar o mouse */
+  transition: background-color 0.3s; /* Transição suave */
+}
+
+#email1{
+  width: 25px;
+  margin-right: 10px;
+}
+
