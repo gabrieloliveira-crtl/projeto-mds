@@ -44,7 +44,6 @@ header nav div a {
 
 /* Estilo do título no cabeçalho */
 header h3 {
-  font-family: "Pacifico", cursive; /* Fonte personalizada */
   color: white; /* Cor do texto */
   font-size: 25px; /* Tamanho da fonte */
   margin-top: 7px; /* Espaçamento superior */
