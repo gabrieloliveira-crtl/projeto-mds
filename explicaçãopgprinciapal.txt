@@ -1,0 +1,93 @@
+Explicação do Código HTML
+
+O que cada linha faz?
+
+Cabeçalho do Documento (<head>)
+
+<!DOCTYPE html>: Diz ao navegador que este é um documento HTML5.
+
+<html lang="pt-br">: Informa que o idioma da página é português do Brasil.
+
+<meta charset="UTF-8">: Permite que a página use letras com acentos e caracteres especiais.
+
+<link rel="stylesheet" href="style.css">: Conecta o arquivo de estilos (CSS) para deixar a página bonita.
+
+<script src="https://kit.fontawesome.com/...">: Adiciona ícones legais, como o de WhatsApp e email.
+
+<link rel="shortcut icon" ...>: Define o ícone que aparece na aba do navegador.
+
+<link href="https://cdn.jsdelivr.net/...">: Usa o Bootstrap, uma ferramenta para criar layouts bonitos e organizados.
+
+<script src="https://unpkg.com/scrollreveal">: Adiciona animações quando você rola a página.
+
+<meta name="viewport" ...>: Faz a página funcionar bem em celulares e tablets.
+
+<title>: Define o nome da página que aparece na aba do navegador.
+
+Corpo do Documento (<body>)
+
+Cabeçalho do Site (<header>)
+
+<header>: É o topo da página, onde ficam o logotipo e o menu.
+
+<nav>: Cria a barra de navegação.
+
+<a href=""><img src="...">: Mostra o logotipo da empresa.
+
+<h3>: Exibe o nome da empresa.
+
+<div> com links: Contém os botões para navegar para outras partes do site, como "Educação" e "Emergência".
+
+<div> com ícones: Mostra os ícones de WhatsApp, email e telefone para contato.
+
+Conteúdo Principal (<main>)
+
+Primeira Seção
+
+<section class="sect1">: É a primeira parte do site, com o título principal.
+
+<h2>: Mostra o nome "Intermed Data Center".
+
+<p>: Exibe o slogan "Medicina que transforma".
+
+Segunda Seção
+
+<section class="sect2">: É a parte "Sobre Nós".
+
+<h3>: Mostra o título "Sobre Nós".
+
+<p>: Explica o que a empresa faz e sua missão.
+
+<div id="img">: Mostra uma imagem ilustrativa.
+
+Outras Seções
+
+<section class="sect3">: Mostra os "Valores" da empresa.
+
+<h3>: Exibe o título "Valores".
+
+<p>: Explica os valores da empresa.
+
+Imagens: Cada seção tem uma imagem para ilustrar o conteúdo.
+
+Rodapé do Site (<footer>)
+
+<footer>: É a parte de baixo da página.
+
+<div class="logo-container">: Mostra o logotipo e os ícones de contato.
+
+<div class="div1">: Exibe o endereço e telefone da empresa.
+
+<div class="div2">: Contém um formulário para o visitante se inscrever com o email.
+
+<hr>: Adiciona uma linha horizontal para separar o rodapé.
+
+Botões e Scripts
+
+<a href="web.whatsapp.com">: Link para abrir o WhatsApp.
+
+<p>: Mostra os direitos autorais da página.
+
+<button>: Botão para alternar o tema ou acessar o WhatsApp.
+
+<script src="script.js">: Conecta o arquivo JavaScript para adicionar funcionalidades extras.

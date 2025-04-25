@@ -18,5 +18,17 @@ ScrollReveal().reveal('#img',{
     origin: 'left', // origem do efeito: o conteudo virá da direita para a esquerda
     distance : '50px', // distancia que o elemento "viaja" antes de aparecer
 })
-
-
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector("header");
+    const firstSection = document.querySelector(".sect1");
+  
+    window.addEventListener("scroll", () => {
+      const firstSectionBottom = firstSection.getBoundingClientRect().bottom;
+  
+      if (firstSectionBottom <= 0) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  });

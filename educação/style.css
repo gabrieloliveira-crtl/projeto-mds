@@ -139,6 +139,41 @@
     transition: 1s; /* Transição suave */
     color: rgb(0, 221, 255); /* Cor ao passar o mouse */
   }
+  /* Estilo para o cabeçalho ao rolar */
+header.scrolled {
+  background-color: rgba(0, 174, 255, 0); /* Fundo permanece branco */
+  color: black; /* Texto preto */
+}
+header.scrolled i{
+  color : black; /* Ícones pretos */
+}
+header.scrolled nav{
+  background-color: rgb(202, 199, 199);
+  border-radius: 15px;
+}
+header.scrolled h3 {
+  color: black; /* Texto preto */
+}
+
+/* Ajuste para os links no estado inicial */
+header a {
+  color: black; /* Texto preto */
+}
+
+/* Ajuste para os links no estado scrolled */
+header.scrolled a {
+  color: black; /* Texto preto */
+}
+/* Estilo do cabeçalho fixo */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #95def5; /* Fundo branco */
+  color: black; /* Texto preto */
+  transition: background-color 0.3s, color 0.3s;
+}
 
   /* Estilo da primeira seção */
 .secti1 {
@@ -159,28 +194,6 @@
 .secti1 h3{
     color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Estilo do rodapé */
 footer {

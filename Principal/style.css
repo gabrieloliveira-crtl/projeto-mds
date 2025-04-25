@@ -13,7 +13,6 @@
 
 /* Estilo do cabeçalho */
 header {
-  box-shadow: 0px 10px 45px black; /* Sombra do cabeçalho */
   z-index: 999; /* Garante que o cabeçalho fique acima de outros elementos */
   position: sticky; /* Fixa o cabeçalho no topo ao rolar a página */
   background-color: #95def5; /* Cor de fundo do cabeçalho */
@@ -53,6 +52,42 @@ header h3 {
 header img {
   width: 60px; /* Largura da imagem */
   border-radius: 200px; /* Bordas arredondadas */
+}
+/* Estilo do cabeçalho fixo */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #95def5; /* Fundo branco */
+  color: black; /* Texto preto */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para o cabeçalho ao rolar */
+header.scrolled {
+  background-color: rgba(0, 174, 255, 0); /* Fundo permanece branco */
+  color: black; /* Texto preto */
+}
+header.scrolled i{
+  color : black; /* Ícones pretos */
+}
+header.scrolled nav{
+  background-color: rgb(202, 199, 199);
+  border-radius: 15px;
+}
+header.scrolled h3 {
+  color: black; /* Texto preto */
+}
+
+/* Ajuste para os links no estado inicial */
+header a {
+  color: black; /* Texto preto */
+}
+
+/* Ajuste para os links no estado scrolled */
+header.scrolled a {
+  color: black; /* Texto preto */
 }
 
 /* Estilo para listas no cabeçalho e rodapé */
@@ -190,6 +225,25 @@ header .fa-phone:hover {
 .sect2 #img img {
   width: 50em; /* Largura da imagem */
   border-radius: 15px; /* Bordas arredondadas */
+}
+
+
+.sect3{
+  padding: 6rem; /* Espaçamento interno */
+  background-color: white; /* Cor de fundo */
+  display: flex; /* Define layout flexível */
+  text-align: center; /* Centraliza o texto */
+  gap: 100px; /* Espaçamento entre os itens */
+  /* Distribui os itens uniformemente */
+}
+.texto1{
+  display: flex;
+  gap: 20px; /* Espaçamento entre os itens */
+
+}
+.texto1 img{
+  width: 50em; /* Largura da imagem */
+  border-radius: 15px;
 }
 
 /* Estilo do rodapé */
