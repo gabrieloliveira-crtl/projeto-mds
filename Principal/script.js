@@ -18,6 +18,16 @@ ScrollReveal().reveal('#img',{
     origin: 'left', // origem do efeito: o conteudo virá da direita para a esquerda
     distance : '50px', // distancia que o elemento "viaja" antes de aparecer
 })
+ScrollReveal().reveal('.texto1',{
+    duration: 3000, // duração do efeito (em milisegundos), define a velocidade da transição
+    origin: 'right', // origem do efeito: o conteudo virá da direita para a esquerda
+    distance : '50px', // distancia que o elemento "viaja" antes de aparecer
+})
+ScrollReveal().reveal('.img1',{
+    duration: 1000, // duração do efeito (em milisegundos), define a velocidade da transição
+    origin: 'right', // origem do efeito: o conteudo virá da direita para a esquerda
+    distance : '50px', // distancia que o elemento "viaja" antes de aparecer
+})
 document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector("header");
     const firstSection = document.querySelector(".sect1");
