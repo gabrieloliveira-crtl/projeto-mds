@@ -12,137 +12,63 @@
   @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&family=Questrial&display=swap');
   
   /* Estilo do cabeçalho */
-  header {
-    box-shadow: 0px 10px 45px black; /* Sombra do cabeçalho */
-    z-index: 999; /* Garante que o cabeçalho fique acima de outros elementos */
-    position: sticky; /* Fixa o cabeçalho no topo ao rolar a página */
-    background-color: #95def5; /* Cor de fundo do cabeçalho */
-    left: 0; /* Alinha o cabeçalho à esquerda */
-    padding: 10px; /* Espaçamento interno */
-    height: 1px; /* Altura do cabeçalho */
-    align-items: center; /* Alinha os itens verticalmente */
-    text-align: center;
-  }
-  
-  /* Estilo da barra de navegação */
-  header nav {
-    margin-left: 10px; /* Espaçamento à esquerda */
-    display: flex; /* Define layout flexível */
-    gap: 80px; /* Espaçamento entre os itens */
-    text-align: center; /* Centraliza o texto */
-    margin-top: 30px; /* Espaçamento superior */
-    align-items: center; /* Alinha os itens verticalmente */
-    justify-content: space-around; /* Distribui os itens uniformemente */
-  }
-  
-  /* Links dentro da barra de navegação */
-  header nav div a {
-    margin-left: 20px; /* Espaçamento à esquerda */
-    font-size: 19px; /* Tamanho da fonte */
-    color: white; /* Cor do texto */
-    text-decoration: none; /* Remove sublinhado */
-  }
-  
-  /* Estilo do título no cabeçalho */
-  header h3 {
-    font-family: "Pacifico", cursive; /* Fonte personalizada */
-    color: white; /* Cor do texto */
-    font-size: 25px; /* Tamanho da fonte */
-    margin-top: 7px; /* Espaçamento superior */
-  }
-  
-  /* Estilo da imagem no cabeçalho */
-  header img {
-    width: 60px; /* Largura da imagem */
-    border-radius: 200px; /* Bordas arredondadas */
-  }
-  
-  /* Estilo para listas no cabeçalho e rodapé */
-  a {
-    position: relative; /* Define posição relativa */
-    padding: 10px 0; /* Espaçamento interno */
-    cursor: pointer; /* Define o cursor como ponteiro */
-    transition: color 0.3s; /* Transição suave para a cor */
-  }
-  
-  /* Linha oculta inicialmente nos links */
-   a::after {
-    content: ""; /* Adiciona conteúdo vazio */
-    position: absolute; /* Define posição absoluta */
-    left: 0; /* Alinha à esquerda */
-    right: 0; /* Alinha à direita */
-    bottom: 0; /* Alinha na parte inferior */
-    height: 2px; /* Altura da linha */
-    background-color: rgb(0, 204, 255); /* Cor da linha */
-    transform: scaleX(0); /* Oculta a linha inicialmente */
-    transform-origin: bottom right; /* Origem da animação */
-    transition: transform 0.3s; /* Animação suave */
-  }
-  
-  /* Animação ao passar o mouse nos links */
-   a:hover::after {
-    transform: scaleX(1); /* Expande a linha */
-    transform-origin: bottom left; /* Origem da expansão */
-  }
-  
-  /* Estilo do botão de cadastro */
-  header button {
-    color: white; /* Cor do texto */
-    position: relative; /* Define posição relativa */
-    background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
-    border: none; /* Remove borda */
-    cursor: pointer; /* Define o cursor como ponteiro */
-    transition: color 0.3s; /* Transição suave para a cor */
-    border-radius: 10px; /* Bordas arredondadas */
-    width: 7vw; /* Largura do botão */
-    height: 5vh; /* Altura do botão */
-    margin-left: 30px; /* Espaçamento à esquerda */
-  }
-  
-  /* Linha animada no botão */
-  header button::after {
-    content: ""; /* Adiciona conteúdo vazio */
-    position: absolute; /* Define posição absoluta */
-    left: 0; /* Alinha à esquerda */
-    right: 0; /* Alinha à direita */
-    bottom: 0; /* Alinha na parte inferior */
-    height: 10px; /* Altura da linha */
-    background-color: white; /* Cor da linha */
-    transform: scaleX(0); /* Oculta a linha inicialmente */
-    transform-origin: bottom right; /* Origem da animação */
-    transition: transform 0.8s; /* Animação suave */
-  }
-  
-  /* Animação ao passar o mouse no botão */
-  header button:hover::after {
-    transform: scaleX(1); /* Expande a linha */
-    transform-origin: bottom left; /* Origem da expansão */
-  }
-  
-  /* Estilo dos ícones no cabeçalho */
-  header i {
-    font-size: 20px; /* Tamanho dos ícones */
-    color: white; /* Cor dos ícones */
-    margin-left: 16px; /* Espaçamento à esquerda */
-  }
-  
-  /* Animação ao passar o mouse nos ícones */
-  header .fa-whatsapp:hover {
-    transition: 1s; /* Transição suave */
-    color: green; /* Cor ao passar o mouse */
-  }
-  header .fa-envelope:hover {
-    transition: 1s; /* Transição suave */
-    color: blue; /* Cor ao passar o mouse */
-  }
-  header .fa-phone:hover {
-    transition: 1s; /* Transição suave */
-    color: rgb(0, 221, 255); /* Cor ao passar o mouse */
-  }
-  /* Estilo para o cabeçalho ao rolar */
+header {
+  z-index: 999; /* Garante que o cabeçalho fique acima de outros elementos */
+  position: sticky; /* Fixa o cabeçalho no topo ao rolar a página */
+  background-color: #95def5; /* Cor de fundo do cabeçalho */
+  left: 0; /* Alinha o cabeçalho à esquerda */
+  padding: 10px; /* Espaçamento interno */
+  height: 1px; /* Altura do cabeçalho */
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Estilo da barra de navegação */
+header nav {
+  margin-left: 10px; /* Espaçamento à esquerda */
+  display: flex; /* Define layout flexível */
+  gap: 80px; /* Espaçamento entre os itens */
+  text-align: center; /* Centraliza o texto */
+  margin-top: 30px; /* Espaçamento superior */
+  align-items: center; /* Alinha os itens verticalmente */
+  justify-content: space-around; /* Distribui os itens uniformemente */
+}
+
+/* Links dentro da barra de navegação */
+header nav div a {
+  margin-left: 20px; /* Espaçamento à esquerda */
+  font-size: 19px; /* Tamanho da fonte */
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+/* Estilo do título no cabeçalho */
+header h3 {
+  color: white; /* Cor do texto */
+  font-size: 25px; /* Tamanho da fonte */
+  margin-top: 7px; /* Espaçamento superior */
+}
+
+/* Estilo da imagem no cabeçalho */
+header img {
+  width: 60px; /* Largura da imagem */
+  border-radius: 200px; /* Bordas arredondadas */
+}
+/* Estilo do cabeçalho fixo */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #95def5; /* Fundo branco */
+  color: black; /* Texto preto */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para o cabeçalho ao rolar */
 header.scrolled {
   background-color: rgba(0, 174, 255, 0); /* Fundo permanece branco */
   color: black; /* Texto preto */
+
 }
 header.scrolled i{
   color : black; /* Ícones pretos */
@@ -150,6 +76,7 @@ header.scrolled i{
 header.scrolled nav{
   background-color: rgb(202, 199, 199);
   border-radius: 15px;
+  margin-top: -10px;
 }
 header.scrolled h3 {
   color: black; /* Texto preto */
@@ -164,21 +91,115 @@ header a {
 header.scrolled a {
   color: black; /* Texto preto */
 }
-/* Estilo do cabeçalho fixo */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background-color: #95def5; /* Fundo branco */
-  color: black; /* Texto preto */
-  transition: background-color 0.3s, color 0.3s;
+
+/* Estilo para listas no cabeçalho e rodapé */
+a {
+  position: relative; /* Define posição relativa */
+  padding: 10px 0; /* Espaçamento interno */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  transition: color 0.3s; /* Transição suave para a cor */
+}
+
+/* Linha oculta inicialmente nos links */
+ a::after {
+  content: ""; /* Adiciona conteúdo vazio */
+  position: absolute; /* Define posição absoluta */
+  left: 0; /* Alinha à esquerda */
+  right: 0; /* Alinha à direita */
+  bottom: 0; /* Alinha na parte inferior */
+  height: 2px; /* Altura da linha */
+  background-color: rgb(0, 204, 255); /* Cor da linha */
+  transform: scaleX(0); /* Oculta a linha inicialmente */
+  transform-origin: bottom right; /* Origem da animação */
+  transition: transform 0.3s; /* Animação suave */
+}
+
+/* Animação ao passar o mouse nos links */
+ a:hover::after {
+  transform: scaleX(1); /* Expande a linha */
+  transform-origin: bottom left; /* Origem da expansão */
+}
+
+/* Estilo do botão de cadastro */
+header button {
+  color: white; /* Cor do texto */
+  position: relative; /* Define posição relativa */
+  background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
+  border: none; /* Remove borda */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  transition: color 0.3s; /* Transição suave para a cor */
+  border-radius: 10px; /* Bordas arredondadas */
+  width: 7vw; /* Largura do botão */
+  height: 5vh; /* Altura do botão */
+  margin-left: 30px; /* Espaçamento à esquerda */
+}
+
+/* Linha animada no botão */
+header button::after {
+  content: ""; /* Adiciona conteúdo vazio */
+  position: absolute; /* Define posição absoluta */
+  left: 0; /* Alinha à esquerda */
+  right: 0; /* Alinha à direita */
+  bottom: 0; /* Alinha na parte inferior */
+  height: 10px; /* Altura da linha */
+  background-color: white; /* Cor da linha */
+  transform: scaleX(0); /* Oculta a linha inicialmente */
+  transform-origin: bottom right; /* Origem da animação */
+  transition: transform 0.8s; /* Animação suave */
+}
+
+/* Animação ao passar o mouse no botão */
+header button:hover::after {
+  transform: scaleX(1); /* Expande a linha */
+  transform-origin: bottom left; /* Origem da expansão */
+}
+
+/* Estilo dos ícones no cabeçalho */
+header i {
+  font-size: 20px; /* Tamanho dos ícones */
+  color: white; /* Cor dos ícones */
+  margin-left: 16px; /* Espaçamento à esquerda */
+}
+
+/* Animação ao passar o mouse nos ícones */
+header .fa-whatsapp:hover {
+  transition: 1s; /* Transição suave */
+  color: green; /* Cor ao passar o mouse */
+}
+header .fa-envelope:hover {
+  transition: 1s; /* Transição suave */
+  color: blue; /* Cor ao passar o mouse */
+}
+header .fa-phone:hover {
+  transition: 1s; /* Transição suave */
+  color: rgb(0, 221, 255); /* Cor ao passar o mouse */
+}
+
+/* Estilo para o container da barra de pesquisa */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Estilo para a barra de pesquisa */
+#search-bar {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+/* Adicione transições para visibilidade e opacidade */
+main section, main div {
+  transition: visibility 0.3s, opacity 0.3s;
 }
 
   /* Estilo da primeira seção */
 .secti1 {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.509) 100%, rgba(0, 0, 0, 0.459) 3.77%), url(img/estudantes-bolsa-estudo-medicina.webp); /* Fundo com gradiente e imagem */
-    padding: 21vw; /* Espaçamento interno */
+    padding: 24.2vw; /* Espaçamento interno */
     background-position: center; /* Centraliza a imagem */
     background-repeat: no-repeat; /* Não repete a imagem */
     background-size: cover; /* Cobre todo o espaço disponível */
@@ -193,6 +214,119 @@ header {
 }
 .secti1 h3{
     color: white;
+}
+
+
+/* ===========================================SESSÃO2====================================== */
+.topicos {
+    width: 100%;
+    padding: 8rem;
+    background: linear-gradient(180deg, #f7f4e8 8.33%, #daf3ea 100%);
+    margin-top: -75px;
+}
+
+/* ORGANIZANDO AS CAIXAS */
+.segurança,
+.acesso,
+.qualificado,
+.consulta,
+.compromisso {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 7rem;
+    margin-top: 20rem;
+}
+
+.segurança {
+    margin-top: 8rem;
+}
+/* ARRUAMNDO O TEXTO DENTRO DAS DIV (FILHOS) */
+.box-inform {
+    border-radius: 20px;
+    background-color: #85e6c0;
+    opacity: 0.5;
+    text-align: center;
+    width: 25vw;
+    height: auto;
+    padding: 20px;
+    transition: 0.6s;
+}
+.box-inform:hover {
+    transform: rotate(2px);
+    opacity: 1;
+}
+.box-inform h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px;
+}
+.box-inform p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+/* ARRUAMNDO AS CAIXAS QUE ESTÃO AS IMAGENS */
+.box-img {
+    text-align: center;
+    width: 30vw;
+    height: 45vh;
+    padding: 10px;
+    box-shadow: 2px 2px 15px #0b0b0d;
+    border-radius: 20px;
+}
+/* IMAGENS DAS DIVS SEPARADOS */
+.img1 {
+    background-image: url(img/segurança.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img2 {
+    background-image: url(img/acesso.png);
+    background-position: center;
+    background-size: cover;
+}
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+.botao button {
+    width: 10vw;
+    height: 4vh;
+    border-radius: 20px;
+    background-color: #85e6bfc9;
+    border-color: #427a68;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+.botao button:hover {
+    background-color: #85e6c0;
+    border-color: black;
+    box-shadow: 5px 5px 15px rgb(202, 202, 202);
+}
+#oculta {
+    display: none;
+}
+
+.img3 {
+    background-image: url(img/grupo\ qualificado.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img4 {
+    background-image: url(img/consulta.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.img5 {
+    background-image: url(img/compromisso.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 /* Estilo do rodapé */
