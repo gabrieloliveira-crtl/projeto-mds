@@ -195,8 +195,64 @@ header .fa-phone:hover {
 main section, main div {
   transition: visibility 0.3s, opacity 0.3s;
 }
+.search-toggle {
+  position: relative;
+  display: inline-block;
+}
 
-  /* Estilo da primeira seção */
+#search-icon {
+  font-size: 22px;
+  color: #04788d;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+#search-icon:hover {
+  color: #00bcd4;
+}
+
+#search-bar {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 250px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-20px);
+  transition: 
+    opacity 0.4s cubic-bezier(.4,0,.2,1),
+    transform 0.4s cubic-bezier(.4,0,.2,1);
+  z-index: 10;
+}
+
+#search-bar.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#search-results {
+  background: #fff;
+  position: relative;
+  z-index: 1000;
+  padding: 30px 20px;
+}
+
+.result-item {
+  border-bottom: 1px solid #eee;
+  padding: 16px 0;
+}
+
+.result-title {
+  color: #b20000;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.result-summary {
+  color: #333;
+  margin-top: 4px;
+}
+  /* ====================================== Primeira sessão ======================================== */
 .secti1 {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.509) 100%, rgba(0, 0, 0, 0.459) 3.77%), url(img/estudantes-bolsa-estudo-medicina.webp); /* Fundo com gradiente e imagem */
     padding: 24.2vw; /* Espaçamento interno */

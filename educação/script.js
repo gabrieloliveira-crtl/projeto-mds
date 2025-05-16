@@ -32,86 +32,78 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-// Todas as Div que estão oculta, ao clicar no botão vão aparecer
 
-// Função do botão de VER MAIS
-function aparecer() {
-    // Se a Div estiver oculta(display='none')
-    if (document.getElementById('oculta').style.display = 'none') {
-        // Faça ela aparecer normalmente
-        document.getElementById('oculta').style.display = 'block'
-
-        // Se o Botão estiver aparecendo (display='block')
-        document.getElementById('oculta-botao').style.display = 'block'
-        // Faça ele ser ocultado
-        document.getElementById('oculta-botao').style.display = 'none'
-    };
-};
-
-// -------------------------------------------BOTÃO PARA OCULTAR - (SESSÃO2)-----------------------------------------------
-// Todas as Div que estão aparecendo, ao clicar no botão vão de ocultar novamente
-// Função do botão VOLTAR
-function voltar() {
-    // Se a Div estiver aparecendo
-    if (document.getElementById('oculta').style.display = 'block') {
-        // Faça que ele se oculta
-        document.getElementById('oculta').style.display = 'none'
-
-        if (
-            // Se o botão estiver oculto
-            document.getElementById('aparecer-botao').style.display = 'none')
-            // Faça que ele apareça 
-            document.getElementById('aparecer-botao').style.display = 'block'
-        // e quando a Div aparecer faça que o botão VER MAIS apareça 
-        document.getElementById('oculta-botao').style.display = 'block'
-
-    };
-};
-
-function filterSections() {
-  // Obtém o valor da barra de pesquisa
-  const query = document.getElementById('search-bar').value.toLowerCase();
-
-  // Seleciona todas as divs e seções da página
-  const elements = document.querySelectorAll('main section, main div');
-
-  // Itera por cada elemento (div ou seção)
-  elements.forEach(element => {
-    // Verifica se o texto do elemento contém a palavra-chave
-    if (element.innerText.toLowerCase().includes(query)) {
-      element.style.display = 'block'; // Mostra o elemento
-    } else {
-      element.style.display = 'none'; // Esconde o elemento
-    }
-  });
-}
-function filterSections() {
-  // Obtém o valor da barra de pesquisa
-  const query = document.getElementById('search-bar').value.toLowerCase();
-
-  // Seleciona todas as divs e seções da página
-  const elements = document.querySelectorAll('main section, main div');
-
-  // Verifica se a barra de pesquisa está vazia
-  if (query === '') {
-    // Se estiver vazia, mostra todos os elementos
-    elements.forEach(element => {
-      element.style.visibility = 'visible'; // Torna o elemento visível
-      element.style.opacity = '1'; // Define a opacidade como 100%
-      element.style.pointerEvents = 'auto'; // Permite interação com o elemento
-    });
-  } else {
-    // Caso contrário, filtra os elementos com base na palavra-chave
-    elements.forEach(element => {
-      if (element.innerText.toLowerCase().includes(query)) {
-        element.style.visibility = 'visible'; // Torna o elemento visível
-        element.style.opacity = '1'; // Define a opacidade como 100%
-        element.style.pointerEvents = 'auto'; // Permite interação com o elemento
-      } else {
-        element.style.visibility = 'hidden'; // Oculta o elemento visualmente
-        element.style.opacity = '0'; // Define a opacidade como 0%
-        element.style.pointerEvents = 'none'; // Impede interação com o elemento
-      }
-    });
+// Exemplo de dados para busca (você pode adaptar para buscar no DOM ou em um array)
+const searchData = [
+  {
+    title: "Los Angeles food & drink guide: 10 things to try in Los Angeles, California",
+    summary: "A comida de Los Angeles é famosa por sua diversidade. Conheça os sabores únicos da cidade.",
+    category: "Food and Drink",
+    date: "Aug 12, 2024 · 5 min read"
+  },
+  {
+    title: "15 South London Markets You'll Love",
+    summary: "",
+    category: "Shopping",
+    date: "Aug 6, 2024 · 4 min read"
+  },
+  {
+    title: "10 incredible hotels you can book with points in 2024",
+    summary: "",
+    category: "Hotels",
+    date: "Aug 12, 2024 · 4 min read"
+  },
+  {
+    title: "Visiting Chicago on a Budget: Affordable Eats and Attractions",
+    summary: "",
+    category: "Travel, Budget",
+    date: "Aug 8, 2024 · 4 min read"
   }
+];
+
+function filterSections() {
+  const query = document.getElementById('search-bar').value.toLowerCase();
+  const mainContent = document.getElementById('conteudo-principal');
+  const resultsDiv = document.getElementById('search-results');
+
+  if (query === '') {
+    // Mostra o conteúdo principal e esconde os resultados
+    mainContent.style.display = '';
+    resultsDiv.style.display = 'none';
+    resultsDiv.innerHTML = '';
+    return;
+  }
+
+  // Filtra os dados
+  const filtered = searchData.filter(item =>
+    item.title.toLowerCase().includes(query) ||
+    item.summary.toLowerCase().includes(query) ||
+    item.category.toLowerCase().includes(query)
+  );
+
+  // Monta o HTML dos resultados
+  if (filtered.length > 0) {
+    resultsDiv.innerHTML = filtered.map(item => `
+      <div class="result-item">
+        <span class="category">${item.category}</span>
+        <div class="result-title">${item.title}</div>
+        <div class="result-summary">${item.summary}</div>
+        <div class="meta">${item.date}</div>
+      </div>
+    `).join('');
+  } else {
+    resultsDiv.innerHTML = '<p>Nenhum resultado encontrado.</p>';
+  }
+
+  // Mostra os resultados e esconde o conteúdo principal
+  mainContent.style.display = 'none';
+  resultsDiv.style.display = 'block';
 }
+
+document.getElementById('search-icon').addEventListener('click', function() {
+  const searchBar = document.getElementById('search-bar');
+  searchBar.classList.toggle('active');
+  if (searchBar.classList.contains('active')) {
+    searchBar.focus();
+  }
+});
