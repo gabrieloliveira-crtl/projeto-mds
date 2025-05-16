@@ -24,9 +24,9 @@ header {
 
 /* Estilo da barra de navegação */
 header nav {
-  margin-left: 10px; /* Espaçamento à esquerda */
+  margin-left: px; /* Espaçamento à esquerda */
   display: flex; /* Define layout flexível */
-  gap: 80px; /* Espaçamento entre os itens */
+  gap: px; /* Espaçamento entre os itens */
   text-align: center; /* Centraliza o texto */
   margin-top: 30px; /* Espaçamento superior */
   align-items: center; /* Alinha os itens verticalmente */
@@ -36,7 +36,7 @@ header nav {
 /* Links dentro da barra de navegação */
 header nav div a {
   margin-left: 20px; /* Espaçamento à esquerda */
-  font-size: 19px; /* Tamanho da fonte */
+  font-size: 17px; /* Tamanho da fonte */
   color: white; /* Cor do texto */
   text-decoration: none; /* Remove sublinhado */
 }
@@ -76,7 +76,11 @@ header.scrolled i{
 header.scrolled nav{
   background-color: rgb(202, 199, 199);
   border-radius: 15px;
+  padding: 15px;
   margin-top: -10px;
+  width: 101vw;
+  margin-left: -19.6px;
+  font-size: 3px;
 }
 header.scrolled h3 {
   color: black; /* Texto preto */
@@ -120,40 +124,6 @@ a {
   transform-origin: bottom left; /* Origem da expansão */
 }
 
-/* Estilo do botão de cadastro */
-header button {
-  color: white; /* Cor do texto */
-  position: relative; /* Define posição relativa */
-  background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
-  border: none; /* Remove borda */
-  cursor: pointer; /* Define o cursor como ponteiro */
-  transition: color 0.3s; /* Transição suave para a cor */
-  border-radius: 10px; /* Bordas arredondadas */
-  width: 7vw; /* Largura do botão */
-  height: 5vh; /* Altura do botão */
-  margin-left: 30px; /* Espaçamento à esquerda */
-}
-
-/* Linha animada no botão */
-header button::after {
-  content: ""; /* Adiciona conteúdo vazio */
-  position: absolute; /* Define posição absoluta */
-  left: 0; /* Alinha à esquerda */
-  right: 0; /* Alinha à direita */
-  bottom: 0; /* Alinha na parte inferior */
-  height: 10px; /* Altura da linha */
-  background-color: white; /* Cor da linha */
-  transform: scaleX(0); /* Oculta a linha inicialmente */
-  transform-origin: bottom right; /* Origem da animação */
-  transition: transform 0.8s; /* Animação suave */
-}
-
-/* Animação ao passar o mouse no botão */
-header button:hover::after {
-  transform: scaleX(1); /* Expande a linha */
-  transform-origin: bottom left; /* Origem da expansão */
-}
-
 /* Estilo dos ícones no cabeçalho */
 header i {
   font-size: 20px; /* Tamanho dos ícones */
@@ -185,36 +155,9 @@ header .fa-phone:hover {
 
 /* Estilo para a barra de pesquisa */
 #search-bar {
-  width: 300px;
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-/* Adicione transições para visibilidade e opacidade */
-main section, main div {
-  transition: visibility 0.3s, opacity 0.3s;
-}
-.search-toggle {
-  position: relative;
-  display: inline-block;
-}
-
-#search-icon {
-  font-size: 22px;
-  color: #04788d;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-
-#search-icon:hover {
-  color: #00bcd4;
-}
-
-#search-bar {
-  position: absolute;
-  top: 40px;
-  right: 0;
+    position: fixed;
+  top: 30px; /* Ajuste para ficar logo abaixo do header */
+  right: 40px; /* Ajuste conforme o layout */
   width: 250px;
   opacity: 0;
   pointer-events: none;
@@ -222,24 +165,90 @@ main section, main div {
   transition: 
     opacity 0.4s cubic-bezier(.4,0,.2,1),
     transform 0.4s cubic-bezier(.4,0,.2,1);
-  z-index: 10;
+  z-index: 4000; /* Bem acima dos resultados */
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+/* Animação de fade e slide para a caixa de resultados */
+.search-results-box {
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeSlideDown 0.5s cubic-bezier(.4,0,.2,1) forwards;
 }
 
-#search-bar.active {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
+@keyframes fadeSlideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+/* Adicione transições para visibilidade e opacidade */
+main section, main div {
+  transition: visibility 0.3s, opacity 0.3s;
+}
+.search-toggle {
+ display: flex;
+  align-items: center;
+  position: relative; /* Não use fixed aqui */
+  gap: 8px;
+}
+
+#search-icon {
+  font-size: 22px;
+  color: #04788d;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 1;
+}
+
+#search-icon:hover {
+  color: #00bcd4;
+}
+
 #search-results {
-  background: #fff;
-  position: relative;
-  z-index: 1000;
-  padding: 30px 20px;
+  display: none;
+  position: fixed;
+  top: 80px; /* ajuste conforme a altura do seu header */
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.596); /* fundo escurecido */
+  z-index: 2000;
+  overflow-y: auto;
+  
+}
+.search-gradient-top {
+  position: fixed;
+  top: 80px; /* ajuste conforme a altura do seu header */
+  left: 0;
+  width: 100vw;
+  height: 60px;
+  z-index: 2100;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(202,199,199,1) 60%, rgba(202,199,199,0.7) 80%, rgba(202,199,199,0));
+}
+
+
+.search-results-box {
+  background: #ffffff;
+  border-radius: 12px;
+  z-index: 2200;
+  max-width: 700px;
+  margin: 40px auto 0 auto;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+  padding: 32px 24px;
 }
 
 .result-item {
   border-bottom: 1px solid #eee;
-  padding: 16px 0;
+  padding: 18px 0;
+}
+
+.result-item:last-child {
+  border-bottom: none;
 }
 
 .result-title {
@@ -251,6 +260,40 @@ main section, main div {
 .result-summary {
   color: #333;
   margin-top: 4px;
+}
+
+.category {
+  color: #888;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.meta {
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 2px;
+}
+
+#search-icon {
+  font-size: 22px;
+  color: #04788d;
+  cursor: pointer;
+  transition: color 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+#search-icon:hover {
+  color: #00bcd4;
+}
+
+
+
+#search-bar.active {
+ opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
   /* ====================================== Primeira sessão ======================================== */
 .secti1 {
@@ -456,6 +499,43 @@ main section, main div {
 .story-text .meta {
   font-size: 11px;
   color: #777;
+}
+.result-item {
+  border-bottom: 1px solid #eee;
+  padding: 18px 0;
+  transition: background 0.2s;
+}
+.result-item:last-child {
+  border-bottom: none;
+}
+.result-item:hover {
+  background: #f5f8fa;
+}
+
+.category {
+  font-size: 0.9em;
+  color: #04788d;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.result-title {
+  font-size: 1.15em;
+  font-weight: bold;
+  color: #b30000;
+  margin: 4px 0 2px 0;
+}
+
+.result-summary {
+  font-size: 1em;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.meta {
+  font-size: 0.85em;
+  color: #888;
 }
 /* Estilo do rodapé */
 footer {

@@ -26,7 +26,7 @@ header {
 header nav {
   margin-left: 10px; /* Espaçamento à esquerda */
   display: flex; /* Define layout flexível */
-  gap: 80px; /* Espaçamento entre os itens */
+  gap: px; /* Espaçamento entre os itens */
   text-align: center; /* Centraliza o texto */
   margin-top: 30px; /* Espaçamento superior */
   align-items: center; /* Alinha os itens verticalmente */
@@ -36,7 +36,7 @@ header nav {
 /* Links dentro da barra de navegação */
 header nav div a {
   margin-left: 20px; /* Espaçamento à esquerda */
-  font-size: 19px; /* Tamanho da fonte */
+  font-size: 16px; /* Tamanho da fonte */
   color: white; /* Cor do texto */
   text-decoration: none; /* Remove sublinhado */
 }

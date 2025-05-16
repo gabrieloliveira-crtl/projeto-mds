@@ -56,54 +56,50 @@ const searchData = [
   {
     title: "Visiting Chicago on a Budget: Affordable Eats and Attractions",
     summary: "",
-    category: "Travel, Budget",
+    category: "pão, Budget",
     date: "Aug 8, 2024 · 4 min read"
   }
 ];
-
-function filterSections() {
-  const query = document.getElementById('search-bar').value.toLowerCase();
-  const mainContent = document.getElementById('conteudo-principal');
-  const resultsDiv = document.getElementById('search-results');
-
-  if (query === '') {
-    // Mostra o conteúdo principal e esconde os resultados
-    mainContent.style.display = '';
-    resultsDiv.style.display = 'none';
-    resultsDiv.innerHTML = '';
-    return;
-  }
-
-  // Filtra os dados
-  const filtered = searchData.filter(item =>
-    item.title.toLowerCase().includes(query) ||
-    item.summary.toLowerCase().includes(query) ||
-    item.category.toLowerCase().includes(query)
-  );
-
-  // Monta o HTML dos resultados
-  if (filtered.length > 0) {
-    resultsDiv.innerHTML = filtered.map(item => `
-      <div class="result-item">
-        <span class="category">${item.category}</span>
-        <div class="result-title">${item.title}</div>
-        <div class="result-summary">${item.summary}</div>
-        <div class="meta">${item.date}</div>
-      </div>
-    `).join('');
-  } else {
-    resultsDiv.innerHTML = '<p>Nenhum resultado encontrado.</p>';
-  }
-
-  // Mostra os resultados e esconde o conteúdo principal
-  mainContent.style.display = 'none';
-  resultsDiv.style.display = 'block';
-}
-
 document.getElementById('search-icon').addEventListener('click', function() {
   const searchBar = document.getElementById('search-bar');
   searchBar.classList.toggle('active');
   if (searchBar.classList.contains('active')) {
     searchBar.focus();
+  } else {
+    searchBar.value = '';
+    filterSections();
   }
 });
+
+async function fetchItens(query = '') {
+  const res = await fetch('http://localhost:3000/itens?q=' + encodeURIComponent(query));
+  return await res.json();
+}
+
+async function filterSections() {
+  const query = document.getElementById('search-bar').value;
+  const resultsDiv = document.getElementById('search-results');
+  const itens = await fetchItens(query);
+
+  if (!query && itens.length === 0) {
+    resultsDiv.style.display = 'none';
+    resultsDiv.innerHTML = '';
+    return;
+  }
+
+  resultsDiv.innerHTML = `
+    <div class="search-gradient-top"></div>
+    <div class="search-results-box">
+      ${itens.map(item => `
+        <div class="result-item">
+          <span class="category">${item.categoria}</span>
+          <div class="result-title">${item.titulo}</div>
+          <div class="result-summary">${item.resumo}</div>
+          <div class="meta">${item.data}</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+  resultsDiv.style.display = 'block';
+}
+
