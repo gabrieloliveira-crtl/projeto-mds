@@ -33,6 +33,39 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Função do botão de VER MAIS
+function aparecer() {
+    // Se a Div estiver oculta(display='none')
+    if (document.getElementById('oculta').style.display = 'none') {
+        // Faça ela aparecer normalmente
+        document.getElementById('oculta').style.display = 'block'
+
+        // Se o Botão estiver aparecendo (display='block')
+        document.getElementById('oculta-botao').style.display = 'block'
+        // Faça ele ser ocultado
+        document.getElementById('oculta-botao').style.display = 'none'
+    };
+};
+
+// -------------------------------------------BOTÃO PARA OCULTAR - (SESSÃO2)-----------------------------------------------
+// Todas as Div que estão aparecendo, ao clicar no botão vão de ocultar novamente
+// Função do botão VOLTAR
+function voltar() {
+    // Se a Div estiver aparecendo
+    if (document.getElementById('oculta').style.display = 'block') {
+        // Faça que ele se oculta
+        document.getElementById('oculta').style.display = 'none'
+
+        if (
+            // Se o botão estiver oculto
+            document.getElementById('aparecer-botao').style.display = 'none')
+            // Faça que ele apareça 
+            document.getElementById('aparecer-botao').style.display = 'block'
+        // e quando a Div aparecer faça que o botão VER MAIS apareça 
+        document.getElementById('oculta-botao').style.display = 'block'
+
+    };
+};
 // Exemplo de dados para busca (você pode adaptar para buscar no DOM ou em um array)
 const searchData = [
   {

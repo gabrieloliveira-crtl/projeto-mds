@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -86,9 +86,13 @@
 
         <section class="latest-stories">
   <div class="header">
-    <h2>Latest Stories</h2>
-    <button class="view-all">Read more articles</button>
+    <h2>Ultimas Notícias</h2>
+    <div class="botao">
+                        <button onclick="aparecer()" id="oculta-botao">Ver
+                            Mais</button>
+                    </div>
   </div>
+   
 
   <div class="stories-container">
     <!-- Destaque principal -->
@@ -131,7 +135,50 @@
         </div>
       </div>
     </div>
+  </div><div id="oculta">
+                       <section class="top-destinations">
+  <div class="section-header">
+    <h2>Top Destinations</h2>
+    <nav class="destination-nav">
+      <a href="#" class="active">Popular</a>
+    
+    </nav>
+    
   </div>
+
+  <div class="cards-container">
+    <div class="destination-card">
+      <div class="image-placeholder1"></div>
+      <h4>Golden Bridge, Ba Na Hills</h4>
+      <p>Vietnam</p>
+    </div>
+
+    <div class="destination-card">
+      <div class="image-placeholder1"></div>
+      <h4>Dubrovnik</h4>
+      <p>Croatia</p>
+    </div>
+
+    <div class="destination-card">
+      <div class="image-placeholder1"></div>
+      <h4>Hot Air Balloon Cappadocia</h4>
+      <p>Turkey</p>
+    </div>
+
+    <div class="destination-card">
+      <div class="image-placeholder1"></div>
+      <h4>Sydney Harbour Bridge</h4>
+      <p>Australia</p>
+    </div>
+  </div>
+</section>
+                        <!-- =======================================BOTÃO PARA OCULTAR======================================= -->
+                        <!-- Ao clicar nele, o botão e as Div que estão na "class=oculta" vão se esconder -->
+                        <div class="botao">
+                            <button onclick="voltar()"
+                                id="aparecer-botao">Voltar</button>
+                        </div>
+                    </div>
 </section>
 </main>
 
