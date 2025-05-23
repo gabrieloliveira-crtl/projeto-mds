@@ -1,0 +1,109 @@
+ * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+  
+      body {
+        background-color: #f4f4f4;
+        color: #333;
+      }
+  
+      header {
+        background-color: #c4170c;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        letter-spacing: 1px;
+      }
+  
+      .search-container {
+        background-color: #fff;
+        padding: 15px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+  
+      .search-container input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+  
+      .news-container {
+        max-width: 900px;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+  
+      .news-item {
+        background: #fff;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        transform: scale(0.95);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        position: relative;
+      }
+  
+      /* Efeito de expandir no hover */
+      .news-item:hover {
+        transform: scale(1.05);
+        z-index: 10;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+      }
+  
+      .news-item img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+  
+      .news-content {
+        padding: 15px 20px;
+      }
+  
+      .news-title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #c4170c;
+      }
+  
+      .news-description {
+        font-size: 16px;
+        color: #444;
+        margin-bottom: 15px;
+      }
+  
+      .news-button {
+        background-color: #c4170c;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 3px;
+        text-decoration: none;
+        font-size: 14px;
+        align-self: flex-end;
+        transition: background 0.3s;
+      }
+  
+      .news-button:hover {
+        background-color: #a8120a;
+      }
+  
+      .visible {
+        transform: scale(1);
+      }

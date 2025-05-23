@@ -1,0 +1,60 @@
+<!-- Define o tipo de documento e a linguagem da página -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="educacao.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saúde em Foco - Notícias</title>
+  </head>
+
+<body>
+  <!-- Cabeçalho da página com o nome do site -->
+  <header>Saúde em Foco</header>
+
+  <!-- Campo de busca de notícias -->
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Buscar notícias de saúde...">
+  </div>
+
+  <!-- Container com todas as notícias -->
+  <div class="news-container" id="newsContainer">
+    
+    <!-- Cada "news-item" representa uma notícia -->
+    <!-- O atributo data-keywords é usado para buscar por palavras-chave -->
+    <div class="news-item" data-keywords="aids hiv prevenção">
+      <img src="https://via.placeholder.com/900x400?text=Suspeita+de+AIDS" alt="Suspeita de AIDS">
+      <div class="news-content">
+        <div class="news-title">O que fazer se eu suspeitar de AIDS?</div>
+        <div class="news-description">Descubra os primeiros passos que você deve tomar ao suspeitar de infecção por HIV, incluindo onde buscar ajuda e os exames recomendados.</div>
+        <a class="news-button" href="#">Saiba mais</a>
+      </div>
+    </div>
+
+    <!-- Repetição da estrutura para cada notícia -->
+    <!-- As palavras-chave mudam conforme o tema da notícia -->
+    <div class="news-item" data-keywords="doenças carnaval febre dengue">
+      <img src="https://via.placeholder.com/900x400?text=Doenças+do+Carnaval" alt="Doenças do Carnaval">
+      <div class="news-content">
+        <div class="news-title">As doenças mais perigosas do carnaval</div>
+        <div class="news-description">Durante o carnaval, o risco de contaminação aumenta. Veja quais doenças são comuns e como se prevenir.</div>
+        <a class="news-button" href="#">Saiba mais</a>
+      </div>
+    </div>
+
+    <!-- Outras notícias omitidas aqui para evitar repetição... (segue a mesma estrutura acima) -->
+    <!-- ... até a última notícia -->
+    <div class="news-item" data-keywords="saúde idosos cuidados terceira idade">
+      <img src="https://via.placeholder.com/900x400?text=Cuidados+com+idosos" alt="Cuidados com idosos">
+      <div class="news-content">
+        <div class="news-title">Cuidados com a saúde na terceira idade</div>
+        <div class="news-description">Com o envelhecimento da população, é essencial conhecer os cuidados específicos para os idosos.</div>
+        <a class="news-button" href="#">Saiba mais</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="educacao.js"></script>
+</body>
+</html>
