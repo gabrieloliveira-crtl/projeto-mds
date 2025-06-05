@@ -60,15 +60,47 @@ header {
   width: 100%;
   z-index: 1000;
   background-color: #95def5; /* Fundo branco */
-  color: black; /* Texto preto */
   transition: background-color 0.3s, color 0.3s;
 }
+.mobile-menu{
+  color: rgb(255, 255, 255);
+}
+.mobile-menu nav ul li a {
+  color: #fff !important;
+}
+header.scrolled .mobile-menu a {
+  color: #ffffff !important;
+}
+.mobile-menu nav ul li a {
+  color: #fff !important;
+}
+body.mobile-menu .fas  {
+  color: #ffffff !important;
+}
+.mobile-menu .fas {
+  color: rgb(255, 255, 255);
+}
+header button .fas{
+  color: #fff !important;
+}
+
+header.scrolled .mobile-menu .fas {
+  color: #ffffff !important;
+}
+
+body.menu-open .mobile-menu .fas {
+  color: #ffffff !important;
+}
+
 
 /* Estilo para o cabeçalho ao rolar */
 header.scrolled {
   background-color: rgba(0, 174, 255, 0); /* Fundo permanece branco */
   color: black; /* Texto preto */
 
+}
+header.scorlled .mobile-menu{
+  color: white;
 }
 header.scrolled i{
   color : black; /* Ícones pretos */
@@ -516,6 +548,8 @@ button[type="submit"]:hover {
     gap: 30px;
     text-align: center;
   }
+ 
+
 
   .sect2 #texto,
   .sect2 #img {

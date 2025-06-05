@@ -42,6 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+  window.addEventListener("load", () => {
+    document.body.style.visibility = "visible";
+  });
 
 // ...existing code...
 
