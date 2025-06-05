@@ -504,6 +504,77 @@ button[type="submit"]:hover {
   }
  
 }
+/* ...existing code... */
+@media (max-width: 400px) {
+  .sect2 {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .sect2 #texto,
+  .sect2 #img {
+    flex: 1 1 100%;
+  }
+  
+  .sect2 #img img {
+    max-width: 100%;
+  }
+ 
+  /* Terceira seção */
+  .sect3 {
+    flex-direction: column;
+    padding: 2rem;
+    margin: 100px 0px;
+    gap: 30px;
+  }
+
+  .texto1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .texto1 img {
+    width: 100%;
+  }
+
+  /* Rodapé */
+  .div-pai {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .logo-container img {
+    width: 45px;
+  }
+
+  #email {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .text-and-icons p {
+    font-size: 14px;
+  }
+
+  .icons a i {
+    font-size: 18px;
+  }
+
+  /* Botão flutuante */
+  button#theme-toggle {
+    font-size: 24px;
+    padding: 10px;
+    bottom: 15px;
+    right: 15px;
+  }
+ 
+}
 
 
 
