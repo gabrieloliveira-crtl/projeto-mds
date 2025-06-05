@@ -1,269 +1,366 @@
 <!DOCTYPE html>
 <!-- Declara que o documento é HTML5 -->
 <html lang="pt-br">
-<!-- Define o idioma principal da página como português do Brasil -->
-<head>
+  <!-- Define o idioma principal da página como português do Brasil -->
+  <head>
     <!-- Define o conjunto de caracteres como UTF-8 para suportar caracteres especiais -->
     <meta charset="UTF-8">
-    
+
     <!-- Link para o arquivo CSS externo que contém os estilos da página -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Script para carregar os ícones da biblioteca FontAwesome -->
-    <script src="https://kit.fontawesome.com/b61a4ed80b.js" crossorigin="anonymous"></script>
-    
+    <script src="https://kit.fontawesome.com/b61a4ed80b.js"
+      crossorigin="anonymous"></script>
+
     <!-- Define o ícone (favicon) que aparece na aba do navegador -->
-    <link rel="shortcut icon" href="img/Logo da empresa (fundo removido)io.png" type="image/x-icon">
-    
+    <link rel="shortcut icon" href="img/Logo da empresa (fundo removido)io.png"
+      type="image/x-icon">
+
     <!-- Link para o CSS do Bootstrap, uma biblioteca para facilitar a criação de layouts responsivos -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous">
+
     <!-- Script para animações de rolagem usando a biblioteca ScrollReveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
-    
+
     <!-- Script adicional para carregar ícones da biblioteca FontAwesome -->
-    <script src="https://kit.fontawesome.com/68a82f1b2c.js" crossorigin="anonymous"></script>
-    
+    <script src="https://kit.fontawesome.com/68a82f1b2c.js"
+      crossorigin="anonymous"></script>
+
     <!-- Define a viewport para que a página seja responsiva em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Script para o JavaScript do Bootstrap, usado para funcionalidades interativas -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
     <!-- Define o título da página que aparece na aba do navegador -->
     <title>Intermed Data Center | Oficial</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Início do corpo da página -->
-        
-     <!-- Cabeçalho do site -->
-     <header>
+
+    <!-- Cabeçalho do site -->
+    <header>
+
       <nav>
+
+        <!-- FINAL -->
         <!-- Logotipo da empresa -->
-        <a href=""><img src="img/Logo da empresa (fundo removido)io.png" alt="" loading="lazy"></a>
+        <a href><img src="img/Logo da empresa (fundo removido)io.png" alt
+            loading="lazy"></a>
         <!-- Nome da empresa -->
         <h3>Intermed Center</h3>
         <!-- Links de navegação para diferentes seções do site -->
-        <div>
+        <div class="conteudo">
           <a href="../educação/index.html">Educação</a>
-          <a href="">Localização</a>
-          <a href="">Proteção Feminina</a>
-          <a href="">Emergencia</a>
-          <a href="">Junte-se</a>
-          <a href="">Apoio</a>
+          <a href>Localização</a>
+          <a href>Proteção Feminina</a>
+          <a href>Emergencia</a>
+          <a href>Junte-se</a>
+          <a href>Apoio</a>
         </div>
         <!-- Ícones de contato (WhatsApp, email e telefone) -->
-        <div>
-          <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-          <a href=""><i class="fa-solid fa-envelope"></i></a>
-          <a href=""><i class="fa-solid fa-phone"></i></a>
+        <div class="conteudo">
+          <a href><i class="fa-brands fa-whatsapp"></i></a>
+          <a href><i class="fa-solid fa-envelope"></i></a>
+          <a href><i class="fa-solid fa-phone"></i></a>
         </div>
+
+        <!-- CAIXA MOBILE -->
+        <div class="mobile-menu" id="mobileMenu">
+
+          <!-- Botão para ser utilizado para fechamento da lista -->
+          <button id="closeButton" class="close">
+            <i class="fas fa-times"></i>
+          </button>
+
+          <!-- Essa lista é do Menu Hamburguer quando estiver aberto. -->
+          <ul class="nav-links-mobile">
+            <li><a href="../educação/index.html">Educação</a></li>
+            <li><a href>Localização</a></li>
+            <li> <a href>Proteção Feminina</a></li>
+            <li> <a href>Emergencia</a></li>
+            <li> <a href>Junte-se</a></li>
+            <li> <a href>Apoio</a></li>
+          </ul>
+
+          <!-- Fim da caixa do Menu Hamburguer (Quando estiver aberto) -->
+        </div>
+
+        <!-- Botão de Hamburguer, ele está fora da Div justamente por ser um elemento singular -->
+        <button class="hamburger" id="hamburgerButton">
+          <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- FINAL -->
+
+        <!-- FINAL -->
+
       </nav>
     </header>
-    
-    
+
     <!-- Conteúdo principal -->
     <main>
 
-        <!-- Primeira seção -->
-        <section class="sect1" loading="lazy">
+      <!-- Primeira seção -->
+      <section class="sect1" loading="lazy">
+        <div>
+          <!-- Título principal da seção -->
+          <h2>Intermed Data Center</h2>
+          <!-- Slogan ou frase de impacto -->
+          <p>Medicina que transforma</p>
+        </div>
+      </section>
+
+      <!-- Segunda seção -->
+      <section class="sect2">
+        <div class="texto">
+          <!-- Título da seção -->
+          <h3>Sobre Nós</h3>
+
+          <!-- Texto descritivo sobre a empresa -->
+          <p>A Intermed Data Center nasceu com um propósito claro: conectar
+            pessoas ao cuidado médico que elas precisam, no momento em que mais
+            precisam. Somos uma empresa comprometida em facilitar o acesso à
+            saúde, enviando médicos qualificados para atender em diversas
+            situações e locais.
+
+            Nossa missão é oferecer soluções ágeis, seguras e humanas,
+            utilizando tecnologia e uma rede de profissionais preparados para
+            levar atendimento médico até você — seja em empresas, eventos ou em
+            situações emergenciais.
+
+            Com foco na excelência, empatia e inovação, a Intermed Data Center
+            transforma a maneira como o cuidado em saúde chega às pessoas.</p>
+        </div>
+
+        <!-- Imagem ilustrativa para complementar o texto -->
+        <div id="img">
+          <img src="carrossel/medicina 3.jpg" alt loading="lazy">
+        </div>
+      </section>
+
+      <!-- Seção de valores -->
+      <section class="sect3">
+        <div class="texto1">
+          <div class="img1">
+            <!-- Imagem representando os valores -->
+            <img src="img 2/valores.png" alt loading="lazy">
+          </div>
           <div>
-            <!-- Título principal da seção -->
-            <h2>Intermed Data Center</h2>
-            <!-- Slogan ou frase de impacto -->
-            <p>Medicina que transforma</p>
-          </div>
-        </section>
-        
-        <!-- Segunda seção -->
-        <section class="sect2">
-          <div class="texto">
             <!-- Título da seção -->
-            <h3>Sobre Nós</h3>
-            
-            <!-- Texto descritivo sobre a empresa -->
-            <p>A Intermed Data Center nasceu com um propósito claro: conectar pessoas ao cuidado médico que elas precisam, no momento em que mais precisam. Somos uma empresa comprometida em facilitar o acesso à saúde, enviando médicos qualificados para atender em diversas situações e locais.
-              
-              Nossa missão é oferecer soluções ágeis, seguras e humanas, utilizando tecnologia e uma rede de profissionais preparados para levar atendimento médico até você — seja em empresas, eventos ou em situações emergenciais.
-              
-              Com foco na excelência, empatia e inovação, a Intermed Data Center transforma a maneira como o cuidado em saúde chega às pessoas.</p>
+            <h3>Valores</h3>
+            <!-- Texto descritivo sobre os valores da empresa -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+              nobis cumque impedit aliquid? Harum voluptatibus fugit labore
+              repellendus officia necessitatibus veritatis neque, facilis,
+              quibusdam eveniet assumenda eligendi, recusandae id impedit.</p>
           </div>
-          
-          <!-- Imagem ilustrativa para complementar o texto -->
-          <div id="img">
-              <img src="carrossel/medicina 3.jpg" alt="" loading="lazy">
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- Seção de valores -->
-        <section class="sect3">
-          <div class="texto1">
-            <div class="img1">
-              <!-- Imagem representando os valores -->
-              <img src="img 2/valores.png" alt="" loading="lazy">
-            </div>
-            <div>
-              <!-- Título da seção -->
-              <h3>Valores</h3>
-              <!-- Texto descritivo sobre os valores da empresa -->
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit nobis cumque impedit aliquid? Harum voluptatibus fugit labore repellendus officia necessitatibus veritatis neque, facilis, quibusdam eveniet assumenda eligendi, recusandae id impedit.</p>
-            </div>
-            </div>
-        </section>
-
-        <!-- Seção de visão -->
-        <section class="sect2">
-          <div class="texto1">
+      <!-- Seção de visão -->
+      <section class="sect2">
+        <div class="texto1">
           <div>
             <!-- Título da seção -->
             <h3>Visão</h3>
             <!-- Texto descritivo sobre a visão da empresa -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur odio modi ea soluta, officiis obcaecati illo rem nesciunt ratione facilis ad officia et numquam architecto commodi repudiandae expedita necessitatibus rerum.</p>
-            </div>
-            <div>
-              <!-- Imagem representando a visão -->
-              <img src="img 2/visao.avif" alt="" loading="lazy">
-            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Consectetur odio modi ea soluta, officiis obcaecati illo rem
+              nesciunt ratione facilis ad officia et numquam architecto commodi
+              repudiandae expedita necessitatibus rerum.</p>
           </div>
-        </section>
+          <div>
+            <!-- Imagem representando a visão -->
+            <img src="img 2/visao.avif" alt loading="lazy">
+          </div>
+        </div>
+      </section>
 
-        <!-- Seção de missão -->
-        <section class="sect3">
-          <div class="texto1">
-            <div class="img1">
-              <!-- Imagem representando a missão -->
-              <img src="img 2/missao.jpg" alt="" loading="lazy">
-            </div>
-            <div>
-              <!-- Título da seção -->
-              <h3>Missão</h3>
-              <!-- Texto descritivo sobre a missão da empresa -->
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita unde necessitatibus nulla. Obcaecati fugit cum id maxime? Tempora odit harum et repellat! Minus, minima obcaecati! Optio officia consectetur eius voluptas.</p>
-            </div>
+      <!-- Seção de missão -->
+      <section class="sect3">
+        <div class="texto1">
+          <div class="img1">
+            <!-- Imagem representando a missão -->
+            <img src="img 2/missao.jpg" alt loading="lazy">
           </div>
-          </section>
-       
-        <!-- Seção de educação -->
-        <section class="sect2">
-          <div class="texto">
+          <div>
             <!-- Título da seção -->
-            <h3>Educação</h3>
-            
+            <h3>Missão</h3>
+            <!-- Texto descritivo sobre a missão da empresa -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+              unde necessitatibus nulla. Obcaecati fugit cum id maxime? Tempora
+              odit harum et repellat! Minus, minima obcaecati! Optio officia
+              consectetur eius voluptas.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de educação -->
+      <section class="sect2">
+        <div class="texto">
+          <!-- Título da seção -->
+          <h3>Educação</h3>
+
+          <!-- Texto descritivo -->
+          <p>Acreditamos que a educação em saúde transforma vidas. Por isso,
+            oferecemos conteúdos educativos voltados tanto para o público geral
+            quanto para estudantes e profissionais da área médica. Nossos
+            materiais são produzidos com base científica, em linguagem
+            acessível, e cobrem desde noções básicas de primeiros socorros até
+            atualizações clínicas. Queremos capacitar, informar e inspirar.</p>
+        </div>
+
+        <!-- Imagem ilustrativa -->
+        <div id="img">
+          <img src="img 2/educacao.jpg" alt loading="lazy">
+        </div>
+      </section>
+
+      <!-- Seção de localização -->
+      <section class="sect3">
+        <div class="texto1">
+          <div class="img1">
+            <!-- Imagem representando localização -->
+            <img src="img 2/localizacao.jpg" alt loading="lazy">
+          </div>
+          <div>
+            <!-- Título da seção -->
+            <h3>Localização</h3>
             <!-- Texto descritivo -->
-            <p>Acreditamos que a educação em saúde transforma vidas. Por isso, oferecemos conteúdos educativos voltados tanto para o público geral quanto para estudantes e profissionais da área médica. Nossos materiais são produzidos com base científica, em linguagem acessível, e cobrem desde noções básicas de primeiros socorros até atualizações clínicas. Queremos capacitar, informar e inspirar.</p>
+            <p>Embora nossa atuação seja majoritariamente online, temos uma sede
+              e buscamos impactar comunidades locais por meio de ações
+              presenciais e parcerias com instituições de saúde e educação.
+              Sempre que possível, promovemos eventos, oficinas e projetos em
+              diferentes regiões do país. Nosso compromisso é estar perto de
+              quem precisa — física ou virtualmente.</p>
           </div>
-          
-          <!-- Imagem ilustrativa -->
-          <div id="img">
-              <img src="img 2/educacao.jpg" alt="" loading="lazy">
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- Seção de localização -->
-        <section class="sect3">
-          <div class="texto1">
-            <div class="img1">
-              <!-- Imagem representando localização -->
-              <img src="img 2/localizacao.jpg" alt="" loading="lazy">
-            </div>
-            <div>
-              <!-- Título da seção -->
-              <h3>Localização</h3>
-              <!-- Texto descritivo -->
-              <p>Embora nossa atuação seja majoritariamente online, temos uma sede e buscamos impactar comunidades locais por meio de ações presenciais e parcerias com instituições de saúde e educação. Sempre que possível, promovemos eventos, oficinas e projetos em diferentes regiões do país. Nosso compromisso é estar perto de quem precisa — física ou virtualmente.</p>
-            </div>
-            </div>
-        </section>
-
-        <!-- Seção de proteção feminina -->
-        <section class="sect2">
-          <div class="texto1">
+      <!-- Seção de proteção feminina -->
+      <section class="sect2">
+        <div class="texto1">
           <div>
             <!-- Título da seção -->
             <h3>Proteção Feminina</h3>
             <!-- Texto descritivo -->
-            <p>Defendemos o direito das mulheres à informação, à saúde e à segurança. Esta aba é dedicada à conscientização sobre temas como saúde sexual e reprodutiva, prevenção à violência, acolhimento psicológico e direitos das mulheres. Nosso objetivo é oferecer conteúdo confiável, acessível e empoderador, contribuindo para que cada mulher possa cuidar de si mesma com autonomia e dignidade.</p>
-            </div>
-            <div>
-              <!-- Imagem representando proteção feminina -->
-              <img src="img 2/protecao.jpg" alt="" loading="lazy">
-            </div>
+            <p>Defendemos o direito das mulheres à informação, à saúde e à
+              segurança. Esta aba é dedicada à conscientização sobre temas como
+              saúde sexual e reprodutiva, prevenção à violência, acolhimento
+              psicológico e direitos das mulheres. Nosso objetivo é oferecer
+              conteúdo confiável, acessível e empoderador, contribuindo para que
+              cada mulher possa cuidar de si mesma com autonomia e
+              dignidade.</p>
           </div>
-        </section>
+          <div>
+            <!-- Imagem representando proteção feminina -->
+            <img src="img 2/protecao.jpg" alt loading="lazy">
+          </div>
+        </div>
+      </section>
 
-        <!-- Seção de emergência -->
-        <section class="sect3">
-          <div class="texto1">
-            <div class="img1">
-              <!-- Imagem representando emergência -->
-              <img src="img 2/emergencia.jpg" alt="" loading="lazy">
-            </div>
-            <div>
-              <!-- Título da seção -->
-              <h3>Emergência</h3>
-              <!-- Texto descritivo -->
-              <p>Em situações críticas, a informação correta pode salvar vidas. Nesta aba, reunimos orientações básicas sobre primeiros socorros, sinais de alerta para emergências médicas, e como agir até a chegada de ajuda especializada. Nosso conteúdo é educativo e não substitui o atendimento profissional, mas pode ser essencial em momentos decisivos. Esteja preparado, informe-se e ajude com responsabilidade.</p>
-            </div>
+      <!-- Seção de emergência -->
+      <section class="sect3">
+        <div class="texto1">
+          <div class="img1">
+            <!-- Imagem representando emergência -->
+            <img src="img 2/emergencia.jpg" alt loading="lazy">
           </div>
-          </section>
-       
-        <!-- Seção de "Junte-se" -->
-        <section class="sect2">
-          <div class="texto">
+          <div>
             <!-- Título da seção -->
-            <h3>Junte-se</h3>
-            
+            <h3>Emergência</h3>
             <!-- Texto descritivo -->
-            <p>Nosso projeto é feito por pessoas que acreditam no poder da colaboração. Se você é profissional ou estudante da área da saúde, design, tecnologia, comunicação ou simplesmente quer contribuir com uma causa que transforma vidas, venha com a gente! Aqui, todo apoio faz a diferença — seja criando conteúdo, revisando materiais, ajudando na divulgação ou participando de ações voluntárias. Junte-se ao nosso time e ajude a espalhar conhecimento e cuidado.</p>
+            <p>Em situações críticas, a informação correta pode salvar vidas.
+              Nesta aba, reunimos orientações básicas sobre primeiros socorros,
+              sinais de alerta para emergências médicas, e como agir até a
+              chegada de ajuda especializada. Nosso conteúdo é educativo e não
+              substitui o atendimento profissional, mas pode ser essencial em
+              momentos decisivos. Esteja preparado, informe-se e ajude com
+              responsabilidade.</p>
           </div>
-          
-          <!-- Imagem ilustrativa -->
-          <div id="img">
-              <img src="img 2/juntese.jpg" alt="" loading="lazy">
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- Seção de apoio -->
-        <section class="sect3">
-          <div class="texto1">
-            <div class="img1">
-              <!-- Imagem representando apoio -->
-              <img src="img 2/apoio.jpg" alt="" loading="lazy">
-            </div>
-            <div>
-              <!-- Título da seção -->
-              <h3>Apoio</h3>
-              <!-- Texto descritivo -->
-              <p>Estamos aqui para apoiar quem precisa — com escuta, informação e acolhimento. Esta aba é dedicada a orientar e amparar pessoas em situações de vulnerabilidade, oferecendo acesso a conteúdos úteis, redes de apoio, serviços de saúde, e contatos de emergência. Nosso objetivo é ser uma ponte entre o conhecimento e o cuidado, ajudando cada pessoa a encontrar o suporte que merece, com respeito e empatia.</p>
-            </div>
-            </div>
-        </section>
-      
+      <!-- Seção de "Junte-se" -->
+      <section class="sect2">
+        <div class="texto">
+          <!-- Título da seção -->
+          <h3>Junte-se</h3>
+
+          <!-- Texto descritivo -->
+          <p>Nosso projeto é feito por pessoas que acreditam no poder da
+            colaboração. Se você é profissional ou estudante da área da saúde,
+            design, tecnologia, comunicação ou simplesmente quer contribuir com
+            uma causa que transforma vidas, venha com a gente! Aqui, todo apoio
+            faz a diferença — seja criando conteúdo, revisando materiais,
+            ajudando na divulgação ou participando de ações voluntárias.
+            Junte-se ao nosso time e ajude a espalhar conhecimento e
+            cuidado.</p>
+        </div>
+
+        <!-- Imagem ilustrativa -->
+        <div id="img">
+          <img src="img 2/juntese.jpg" alt loading="lazy">
+        </div>
+      </section>
+
+      <!-- Seção de apoio -->
+      <section class="sect3">
+        <div class="texto1">
+          <div class="img1">
+            <!-- Imagem representando apoio -->
+            <img src="img 2/apoio.jpg" alt loading="lazy">
+          </div>
+          <div>
+            <!-- Título da seção -->
+            <h3>Apoio</h3>
+            <!-- Texto descritivo -->
+            <p>Estamos aqui para apoiar quem precisa — com escuta, informação e
+              acolhimento. Esta aba é dedicada a orientar e amparar pessoas em
+              situações de vulnerabilidade, oferecendo acesso a conteúdos úteis,
+              redes de apoio, serviços de saúde, e contatos de emergência. Nosso
+              objetivo é ser uma ponte entre o conhecimento e o cuidado,
+              ajudando cada pessoa a encontrar o suporte que merece, com
+              respeito e empatia.</p>
+          </div>
+        </div>
+      </section>
+
     </main>
-    
+
     <!-- Rodapé do site -->
     <footer>
       <div class="div-pai">
         <!-- Logo e ícones no rodapé -->
         <div class="logo-container">
-          <img src="img/Logo da empresa (fundo removido)io.png" alt="" loading="lazy">
+          <img src="img/Logo da empresa (fundo removido)io.png" alt
+            loading="lazy">
           <div class="text-and-icons">
             <p>IDC</p>
             <div class="icons">
               <!-- Ícones de contato no rodapé -->
-              <a href="">
+              <a href>
                 <i class="fa-brands fa-whatsapp icones"></i>
               </a>
-              <a href="">
+              <a href>
                 <i class="fa-solid fa-envelope icones"></i>
               </a>
-              <a href="">
+              <a href>
                 <i class="fa-solid fa-phone icones"></i>
               </a>
             </div>
           </div>
         </div>
-      
+
         <!-- Informações de contato -->
         <div class="div1">
           <h3>Intermed Data Center</h3>
@@ -271,32 +368,33 @@
           <p>Telefone: (11) 1234-5678</p>
           <p>Email:</p>
         </div>
-        
+
         <!-- Formulário de inscrição -->
         <div class="div2">
           <h3>Inscreva-Se</h3>
           <p>Acesse o Email e receba notificações sobre nossos projetos</p>
-          <form action="">
+          <form action>
             <!-- Campo para o usuário inserir o email -->
             <input type="text" placeholder="Digite seu email" id="email">
             <!-- Botão para enviar o formulário -->
-            <button type="submit"><img src="img/mail (1).png" alt="" id="email1" loading="lazy">Enviar</button>
+            <button type="submit"><img src="img/mail (1).png" alt id="email1"
+                loading="lazy">Enviar</button>
           </form>
         </div>
       </div>
-      
+
       <!-- Linha horizontal no rodapé -->
       <hr class="footer-line">
       <!-- Direitos autorais -->
       <p>&copy; 2025 Projeto MDS - Educação em Saúde</p>
     </footer>
-    
+
     <!-- Botão para alternar o tema -->
     <a href="https://web.whatsapp.com/">
       <button id="theme-toggle"><i class="fa-brands fa-whatsapp"></i></button>
     </a>
-       
+
     <!-- Script externo -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
