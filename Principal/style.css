@@ -342,7 +342,7 @@ body.menu-open .hamburger {
 
 /* Estilo da imagem na segunda seção */
 .sect2 #img img {
-  width: 50em; /* Largura da imagem */
+  width: 30em; /* Largura da imagem */
   border-radius: 15px; /* Bordas arredondadas */
 }
 
@@ -361,7 +361,7 @@ body.menu-open .hamburger {
 
 }
 .texto1 img{
-  width: 50em; /* Largura da imagem */
+  width: 40em; /* Largura da imagem */
   border-radius: 15px;
 }
 
@@ -476,7 +476,7 @@ button[type="submit"]:hover {
     padding: 5rem;
     gap: 30px;
     text-align: center;
-    margin-bottom: -1000px;
+    margin-bottom: 100px;
   }
   .sect2{
     flex-direction: column-reverse;
@@ -552,6 +552,16 @@ button[type="submit"]:hover {
     margin: 90px 0px;
     gap: 30px;
     text-align: center;
+    margin-top: 150px;
+  }
+  .junt{
+    margin-top: -40px;
+  }
+  .femi{
+    margin-top: -60px;
+  }
+  .educ{
+    margin-top: -80px;
   }
  
 

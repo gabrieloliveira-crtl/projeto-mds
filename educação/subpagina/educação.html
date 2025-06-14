@@ -3,16 +3,57 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
+    
+  <!-- Script para ícones FontAwesome -->
+  <script src="https://kit.fontawesome.com/b61a4ed80b.js" crossorigin="anonymous"></script>
+    
+  <!-- Favicon do site -->
+  <link rel="shortcut icon" href="img/Logo da empresa (fundo removido)io.png" type="image/x-icon">
+  
+  <!-- Link para o CSS do Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <!-- Script para animações ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
+   <!-- Script adicional para ícones FontAwesome -->
+   <script src="https://kit.fontawesome.com/68a82f1b2c.js" crossorigin="anonymous"></script>
+  
+  <!-- Script adicional para ícones FontAwesome -->
+  <script src="https://kit.fontawesome.com/68a82f1b2c.js" crossorigin="anonymous"></script>
+  
+  <!-- Define a viewport para responsividade -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Script para o JavaScript do Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
     <link rel="stylesheet" href="educacao.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saúde em Foco - Notícias</title>
+    <title>Intermed Data Center | Oficial</title>
   </head>
 
 <body>
   <!-- Cabeçalho da página com o nome do site -->
-  <header>Saúde em Foco</header>
-
+  <header>
+      <nav>
+        <a href=""><img src="../img/Logo da empresa (fundo removido)io.png" alt="" loading="lazy"></a>
+        <h3>Intermed Center</h3>
+        <div>
+          <a href="/Principal/index.html">Principal</a>
+          <a href="">Localização</a>
+          <a href="">Proteção Feminina</a>
+          <a href="">Emergencia</a>
+          <a href="">Junte-se</a>
+          <a href="">Apoio</a>
+        </div>
+        <div>
+          <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+          <a href=""><i class="fa-solid fa-envelope"></i></a>
+          <a href=""><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </nav>
+    </header>
+    <main>
   <!-- Campo de busca de notícias -->
   <div class="search-container">
     <input type="text" id="searchInput" placeholder="Buscar notícias de saúde...">
@@ -20,7 +61,15 @@
 
   <!-- Container com todas as notícias -->
   <div class="news-container" id="newsContainer">
+    <!--          IMPORTANTE 
+
+      ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+    -->
+
+    <!-- Instruções para adicionar novas notícias -->
     
+    <!-- todos que forem mexer no codigo para adicionar conteudo, não esqueça de sempre que adicionar noticias conferir se o (data-keywords) esta referente a noticia, pode copiar e colar uma caixa embaixo da outra apenas lembre de trocar as informaçoes como (data-keywords, imagem + alt, e vincular o link da pagina de noticia onde achou tal informação no (href) ) obrigado -->
+
     <!-- Cada "news-item" representa uma notícia -->
     <!-- O atributo data-keywords é usado para buscar por palavras-chave -->
     <div class="news-item" data-keywords="aids hiv prevenção">
@@ -28,6 +77,22 @@
       <div class="news-content">
         <div class="news-title">O que fazer se eu suspeitar de AIDS?</div>
         <div class="news-description">Descubra os primeiros passos que você deve tomar ao suspeitar de infecção por HIV, incluindo onde buscar ajuda e os exames recomendados.</div>
+        <a class="news-button" href="#">Saiba mais</a>
+      </div>
+    </div>
+    <div class="news-item" data-keywords="Covid-19 coronavírus tratamento">
+      <img src="https://via.placeholder.com/900x400?text=Suspeita+de+AIDS" alt="Covid-19">
+      <div class="news-content">
+        <div class="news-title">Como se curar do Covid-19?</div>
+        <div class="news-description">Descubra os primeiros passos que você deve tomar ao ser diagnosticado com Covid-19.</div>
+        <a class="news-button" href="#">Saiba mais</a>
+      </div>
+    </div>
+    <div class="news-item" data-keywords="Hora H prevenção AIDS">
+      <img src="https://via.placeholder.com/900x400?text=Suspeita+de+AIDS" alt="Hora H">
+      <div class="news-content">
+        <div class="news-title">Como se previnir na hora H</div>
+        <div class="news-description">Descubra como se previnir na hora H .</div>
         <a class="news-button" href="#">Saiba mais</a>
       </div>
     </div>
@@ -54,7 +119,7 @@
       </div>
     </div>
   </div>
-
+ </main>
   <script src="educacao.js"></script>
 </body>
 </html>
