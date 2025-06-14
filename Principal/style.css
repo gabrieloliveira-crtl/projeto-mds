@@ -473,9 +473,10 @@ button[type="submit"]:hover {
 @media (max-width: 768px) {
   .sect2 {
     flex-direction: column-reverse;
-    padding: 2rem;
+    padding: 5rem;
     gap: 30px;
     text-align: center;
+    margin-bottom: -1000px;
   }
   .sect2{
     flex-direction: column-reverse;
