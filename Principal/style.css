@@ -632,13 +632,13 @@ button[type="submit"]:hover {
  
 }
 
-@media (max-width: 414px) {
+@media (max-width: 500px) {
   .sect2 {
     flex-direction: column-reverse;
     padding: 2rem;
     gap: 30px;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 200px;
   }
   .junt{
     margin-top: -40px;
