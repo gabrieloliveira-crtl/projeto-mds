@@ -105,7 +105,7 @@ a {
 }
 
 /* Linha oculta inicialmente nos links */
- a::after {
+ header a::after {
   content: ""; /* Adiciona conteúdo vazio */
   position: absolute; /* Define posição absoluta */
   left: 0; /* Alinha à esquerda */
@@ -122,6 +122,11 @@ a {
  a:hover::after {
   transform: scaleX(1); /* Expande a linha */
   transform-origin: bottom left; /* Origem da expansão */
+}
+.sct-btn:hover{
+  transition: 1s;
+  transform: scale(1.1);
+  background-color: #000;  
 }
 
 /* Estilo dos ícones no cabeçalho */
