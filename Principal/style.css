@@ -636,7 +636,6 @@ button[type="submit"]:hover {
   .sect2 {
     flex-direction: column-reverse;
     padding: 2rem;
-    margin-top: 90px;
     gap: 30px;
     text-align: center;
     margin-top: 150px;
