@@ -1,0 +1,391 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #eaeaea;
+  color: #111;
+}
+
+  /* Estilo do cabeçalho */
+header {
+  z-index: 999; /* Garante que o cabeçalho fique acima de outros elementos */
+  position: sticky; /* Fixa o cabeçalho no topo ao rolar a página */
+  background-color: #95def5; /* Cor de fundo do cabeçalho */
+  left: 0; /* Alinha o cabeçalho à esquerda */
+  padding: 10px; /* Espaçamento interno */
+  height: 1px; /* Altura do cabeçalho */
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Estilo da barra de navegação */
+header nav {
+  margin-left: px; /* Espaçamento à esquerda */
+  display: flex; /* Define layout flexível */
+  gap: px; /* Espaçamento entre os itens */
+  text-align: center; /* Centraliza o texto */
+  margin-top: 30px; /* Espaçamento superior */
+  align-items: center; /* Alinha os itens verticalmente */
+  justify-content: space-around; /* Distribui os itens uniformemente */
+}
+header .conteudo{
+  color: black;
+}
+
+/* Links dentro da barra de navegação */
+header nav div a {
+  margin-left: 20px; /* Espaçamento à esquerda */
+  font-size: 17px; /* Tamanho da fonte */
+  color: rgb(0, 0, 0); /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado */
+}
+
+/* Estilo do título no cabeçalho */
+header h3 {
+  color: white; /* Cor do texto */
+  font-size: 25px; /* Tamanho da fonte */
+  margin-top: 7px; /* Espaçamento superior */
+}
+
+/* Estilo da imagem no cabeçalho */
+header img {
+  width: 60px; /* Largura da imagem */
+  border-radius: 200px; /* Bordas arredondadas */
+}
+/* Estilo do cabeçalho fixo */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #95def5; /* Fundo branco */
+  color: black; /* Texto preto */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilo para o cabeçalho ao rolar */
+header {
+  background-color: rgba(0, 174, 255, 0); /* Fundo permanece branco */
+  color: black; /* Texto preto */
+
+}
+header .mobile-menu{
+  color: white;
+}
+header i{
+  color : black; /* Ícones pretos */
+}
+header nav{
+  background-color: rgb(202, 199, 199);
+  border-radius: 15px;
+  margin-top: -10px;
+}
+header h3 {
+  color: black; /* Texto preto */
+}
+
+/* Ajuste para os links no estado inicial */
+header a {
+  color: black; /* Texto preto */
+}
+
+/* Ajuste para os links no estado scrolled */
+header a {
+  color: black; /* Texto preto */
+}
+
+/* Estilo para listas no cabeçalho e rodapé */
+a {
+  position: relative; /* Define posição relativa */
+  padding: 10px 0; /* Espaçamento interno */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  transition: color 0.3s; /* Transição suave para a cor */
+}
+
+/* Linha oculta inicialmente nos links */
+ a::after {
+  content: ""; /* Adiciona conteúdo vazio */
+  position: absolute; /* Define posição absoluta */
+  left: 0; /* Alinha à esquerda */
+  right: 0; /* Alinha à direita */
+  bottom: 0; /* Alinha na parte inferior */
+  height: 2px; /* Altura da linha */
+  background-color: rgb(0, 204, 255); /* Cor da linha */
+  transform: scaleX(0); /* Oculta a linha inicialmente */
+  transform-origin: bottom right; /* Origem da animação */
+  transition: transform 0.3s; /* Animação suave */
+}
+
+/* Animação ao passar o mouse nos links */
+ a:hover::after {
+  transform: scaleX(1); /* Expande a linha */
+  transform-origin: bottom left; /* Origem da expansão */
+}
+
+/* Estilo do botão de cadastro */
+header button {
+  color: rgb(0, 0, 0); /* Cor do texto */
+  position: relative; /* Define posição relativa */
+  background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
+  border: none; /* Remove borda */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  transition: color 0.3s; /* Transição suave para a cor */
+  border-radius: 10px; /* Bordas arredondadas */
+  width: 7vw; /* Largura do botão */
+  height: 5vh; /* Altura do botão */
+  margin-left: 30px; /* Espaçamento à esquerda */
+}
+
+/* Linha animada no botão */
+header button::after {
+  content: ""; /* Adiciona conteúdo vazio */
+  position: absolute; /* Define posição absoluta */
+  left: 0; /* Alinha à esquerda */
+  right: 0; /* Alinha à direita */
+  bottom: 0; /* Alinha na parte inferior */
+  height: 2px; /* Altura da linha */
+  background-color: rgba(190, 73, 73, 0); /* Cor da linha */
+  transform: scaleX(0); /* Oculta a linha inicialmente */
+  transform-origin: bottom right; /* Origem da animação */
+  transition: transform 0.8s; /* Animação suave */
+}
+
+/* Animação ao passar o mouse no botão */
+header button:hover::after {
+  transform: scaleX(1); /* Expande a linha */
+  transform-origin: bottom left; /* Origem da expansão */
+}
+
+/* Estilo dos ícones no cabeçalho */
+header i {
+  font-size: 20px; /* Tamanho dos ícones */
+  color: rgb(0, 0, 0); /* Cor dos ícones */
+  margin-left: 16px; /* Espaçamento à esquerda */
+}
+
+/* Animação ao passar o mouse nos ícones */
+header .fa-whatsapp:hover {
+  transition: 1s; /* Transição suave */
+  color: green; /* Cor ao passar o mouse */
+}
+header .fa-envelope:hover {
+  transition: 1s; /* Transição suave */
+  color: blue; /* Cor ao passar o mouse */
+}
+header .fa-phone:hover {
+  transition: 1s; /* Transição suave */
+  color: rgb(0, 221, 255); /* Cor ao passar o mouse */
+}
+
+/* HAMBURGER DO MOBILE */
+/* =====================================CAIXA MOBILE===================================== */
+.mobile-menu { /*Estilização da caixa Mobile quando aberta*/
+    display: none; /*Display: Nenhum*/
+    position: fixed; /*Posição fixa na parte direita da página*/
+    top: 0; /*Superior em 0 fazendo a caixa encostar ao topo*/
+    right: 0; /*Direita em 0 fazendo a caixa encostar a direita*/
+    width: 60%; /*Largura em porcentagem da caixa*/
+    height: 100%; /*Altura de 100% da tela*/
+    background-color: #0b0b0d; /*Cor de fundo*/
+    flex-direction: column; /*direção dos itens dentro da caixa */
+    align-items: center; /*Alinhamento na vertical do itens*/
+    font-size: 1.8rem; /*tamanho da letra dentro da caixa*/
+}
+
+.nav-links-mobile { /*Lista não ordenada da versão mobile*/
+    display: flex; /*Tornando os itens (LISTAS) flexíveis*/
+    flex-direction: column; /*Estamos direcionando o posicionamento dessas listas*/
+    text-align: center; /*Alinhando o texto ao centro*/
+    gap: 1.2rem; /*Espaço entre as listas */
+    list-style: none; /*Estilo de lista desabilitado*/
+}
+
+.nav-links-mobile li { /*listas da versão Mobile*/
+    border-bottom: 1px solid #787272; /*Bordar inferior de cada lista*/
+    padding-bottom: 1.2rem; /*Tamanho da borda*/
+}
+
+
+.hamburger,
+.close {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+    margin-right: 20px;
+}
+
+
+.close {
+    margin-top: 20px;
+    margin-right: 20px;
+    display: block;
+    align-self: end;
+}
+
+
+.flex {
+    display: flex;
+}
+/* ...existing code... */
+
+/* Exibe o botão hambúrguer em telas pequenas */
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+  .ocultar-mobile {
+    display: none; /* Esconde só o menu desktop */
+  }
+  header .conteudo{
+    display: none;
+    
+  }
+  header {
+    height: 130px;
+  }
+  
+/* Esconde o hambúrguer quando o menu está aberto */
+body.menu-open .hamburger {
+  display: none !important;
+}
+}
+
+
+
+.container {
+  display: flex;
+  height: 60rem;
+}
+
+.login-section {
+  background-color: white;
+  border-radius: 15px;
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-section h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-section p {
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 100vw;
+  font-size: 0.95rem;
+}
+
+form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+.forgot {
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  color: #666;
+  text-decoration: none;
+}
+
+form button {
+  width: 100%;
+  padding: 14px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.or {
+  text-align: center;
+  margin: 20px 0;
+  color: #777;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-login button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: black;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.register {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.register a {
+  color: #95def5;
+  text-decoration: none;
+}
+
+.illustration-section {
+  flex: 1;
+  background-image: url(img/matilde2.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.illustration img {
+  width: 280px;
+  margin-bottom: 20px;
+}
+
+.task-box {
+  flex-wrap: nowrap;
+  margin-top: 20rem;
+  display: inline;
+}
+
+.task-box p {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.progress {
+  font-size: 0.85rem;
+  color: #333;
+}
+
+.subtitle {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+}
+.container{
+    padding: 10rem;
+}
