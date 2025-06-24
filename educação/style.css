@@ -444,11 +444,13 @@ main section, main div {
 }
 
 .image-placeholder {
-  background-color: #ccc;
+  background-image: url(sect2/espirro.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 400px;
   border-radius: inherit;
   object-fit: cover;
-  display: block;
 }
 
 .story-content {
@@ -495,7 +497,34 @@ margin-top: 10px;
 .thumb {
   width: 140px;
   height: 140px;
-  background-color: #ccc;
+  background-image: url(sect2/antibiotico.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-top: -9px;
+}
+
+.thumb2 {
+  width: 140px;
+  height: 140px;
+  background-image: url(sect2/pessoa\ triste.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-top: -3px;
+}
+
+.thumb3 {
+  width: 140px;
+  height: 140px;
+  background-image: url(sect2/examerotina.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: 5px;
   flex-shrink: 0;
   margin-top: -9px;
@@ -692,8 +721,8 @@ margin-top: 10px;
     }
 
     .hero-text .tag {
-      background-color: #ff0;
-      color: #000;
+      background-color: #50acc8;
+      color: #fff;
       font-size: 12px;
       padding: 4px 10px;
       margin-right: 10px;
@@ -724,8 +753,8 @@ margin-top: 10px;
     }
 
     .latest-post img {
-      width: 150px;
-      height: 90px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
       object-fit: cover;
       background-color: #ddd;
