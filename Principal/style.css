@@ -314,6 +314,61 @@ body.menu-open .hamburger {
 .sect1 p {
   color: white; /* Cor do texto */
 }
+.sobre{
+  width: 100%;
+  height: 50rem;
+}
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+    margin-top: 5rem;
+    align-items: center;
+}
+
+.top-section {
+  display: flex;
+  padding: 40px 20px;
+}
+
+.left-menu {
+  width: 20%;
+  padding-right: 20px;
+}
+
+.left-menu ul {
+  list-style: none;
+  line-height: 2;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.left-menu ul li {
+  cursor: pointer;
+}
+
+.right-content {
+  width: 80%;
+}
+
+.right-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.right-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.image-section img {
+  width: 1113px;
+  height: 309px;
+  display: block;
+  margin-top: 20px;
+}
 
 /* Estilo da segunda seção */
 .sect2 {
