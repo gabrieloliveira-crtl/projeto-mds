@@ -15,3 +15,31 @@ Nosso projeto é feito por pessoas que acreditam no poder da colaboração. Se v
 
 Apoio
 Estamos aqui para apoiar quem precisa — com escuta, informação e acolhimento. Esta aba é dedicada a orientar e amparar pessoas em situações de vulnerabilidade, oferecendo acesso a conteúdos úteis, redes de apoio, serviços de saúde, e contatos de emergência. Nosso objetivo é ser uma ponte entre o conhecimento e o cuidado, ajudando cada pessoa a encontrar o suporte que merece, com respeito e empatia.
+
+ <h5 class="card-title mt-2">Nossa Visão</h5>
+            <p class="card-text">Ser referência no acesso à informação em saúde para populações vulneráveis, promovendo conscientização, prevenção e cuidado, com base em fontes reconhecidas e atualizadas.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="img 2/valores.png" class="card-img-top" alt="Notícia 2" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title mt-2">Nossos Valores</h5>
+            <p class="card-text">Compromisso Social: Priorizar o bem-estar de comunidades em situação de vulnerabilidade.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <img src="img 2/missao.jpg" class="card-img-top" alt="Notícia 3" loading="lazy">
+          <div class="card-body">
+            <h5 class="card-title mt-2">Nossa Missão</h5>
+            <p class="card-text">Proporcionar melhores condições de saúde e conforto para comunidades carentes e de maior risco, por meio da disseminação de informações médicas confiáveis e do trabalho coletivo de profissionais capacitados.</p>
+          </div>
+        </div>
+      </div>

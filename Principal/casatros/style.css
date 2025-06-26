@@ -76,7 +76,7 @@ header .mobile-menu{
   color: white;
 }
 header i{
-  color : black; /* Ícones pretos */
+  color : rgb(255, 255, 255); /* Ícones pretos */
 }
 header nav{
   background-color: rgb(202, 199, 199);
@@ -84,17 +84,20 @@ header nav{
   margin-top: -10px;
 }
 header h3 {
-  color: black; /* Texto preto */
+  color: rgb(0, 0, 0); /* Texto preto */
 }
 
 /* Ajuste para os links no estado inicial */
 header a {
-  color: black; /* Texto preto */
+  color: rgb(255, 255, 255); /* Texto preto */
 }
 
 /* Ajuste para os links no estado scrolled */
 header a {
-  color: black; /* Texto preto */
+  color: rgb(255, 255, 255); /* Texto preto */
+}
+header .nav-links-mobile{
+  color: white;
 }
 
 /* Estilo para listas no cabeçalho e rodapé */
@@ -152,6 +155,38 @@ header button::after {
   transform-origin: bottom right; /* Origem da animação */
   transition: transform 0.8s; /* Animação suave */
 }
+.mb-4 {
+  color: rgba(255, 255, 255, 0);
+}
+.mobile-menu{
+  color: rgb(255, 255, 255);
+}
+.mobile-menu nav ul li a {
+  color: #fff !important;
+}
+header.scrolled .mobile-menu a {
+  color: #ffffff !important;
+}
+.mobile-menu nav ul li a {
+  color: #fff !important;
+}
+body.mobile-menu .fas  {
+  color: #ffffff !important;
+}
+.mobile-menu .fas {
+  color: rgb(255, 255, 255);
+}
+header button .fas{
+  color: #fff !important;
+}
+
+header.scrolled .mobile-menu .fas {
+  color: #ffffff !important;
+}
+
+body.menu-open .mobile-menu .fas {
+  color: #ffffff !important;
+}
 
 /* Animação ao passar o mouse no botão */
 header button:hover::after {
@@ -162,7 +197,120 @@ header button:hover::after {
 /* Estilo dos ícones no cabeçalho */
 header i {
   font-size: 20px; /* Tamanho dos ícones */
-  color: rgb(0, 0, 0); /* Cor dos ícones */
+  color: rgb(255, 255, 255); /* Cor dos ícones */
+  margin-left: 16px; /* Espaçamento à esquerda */
+}
+
+/* Animação ao passar o mouse nos ícones */
+header .fa-whatsapp:hover {
+  transition: 1s; /* Transição suave */
+  color: green; /* Cor ao passar o mouse */
+}
+header .fa-envelope:hover {
+  transition: 1s; /* Transição suave */
+  color: blue; /* Cor ao passar o mouse */
+}
+header .fa-phone:hover {
+  transition: 1s; /* Transição suave */
+  color: rgb(0, 221, 255); /* Cor ao passar o mouse */
+}
+/* Estilo para o cabeçalho ao rolar */
+header.scrolled {
+  background-color: rgba(0, 174, 255, 0); /* Fundo permanece branco */
+  color: rgb(255, 255, 255); /* Texto preto */
+
+}
+header.scorlled .mobile-menu{
+  color: white;
+}
+header.scrolled i{
+  color : white; /* Ícones pretos */
+}
+header.scrolled nav{
+  background-color: rgb(202, 199, 199);
+  border-radius: 15px;
+  margin-top: -10px;
+}
+header.scrolled h3 {
+  color: rgb(255, 255, 255); /* Texto preto */
+}
+
+/* Ajuste para os links no estado inicial */
+header a {
+  color: rgb(255, 255, 255); /* Texto preto */
+}
+
+/* Ajuste para os links no estado scrolled */
+header.scrolled a {
+  color: rgb(255, 255, 255); /* Texto preto */
+}
+
+/* Estilo para listas no cabeçalho e rodapé */
+a {
+  position: relative; /* Define posição relativa */
+  padding: 10px 0; /* Espaçamento interno */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  transition: color 0.3s; /* Transição suave para a cor */
+}
+
+/* Linha oculta inicialmente nos links */
+ a::after {
+  content: ""; /* Adiciona conteúdo vazio */
+  position: absolute; /* Define posição absoluta */
+  left: 0; /* Alinha à esquerda */
+  right: 0; /* Alinha à direita */
+  bottom: 0; /* Alinha na parte inferior */
+  height: 2px; /* Altura da linha */
+  background-color: rgb(0, 204, 255); /* Cor da linha */
+  transform: scaleX(0); /* Oculta a linha inicialmente */
+  transform-origin: bottom right; /* Origem da animação */
+  transition: transform 0.3s; /* Animação suave */
+}
+
+/* Animação ao passar o mouse nos links */
+ a:hover::after {
+  transform: scaleX(1); /* Expande a linha */
+  transform-origin: bottom left; /* Origem da expansão */
+}
+
+/* Estilo do botão de cadastro */
+header button {
+  color: white; /* Cor do texto */
+  position: relative; /* Define posição relativa */
+  background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
+  border: none; /* Remove borda */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  transition: color 0.3s; /* Transição suave para a cor */
+  border-radius: 10px; /* Bordas arredondadas */
+  width: 7vw; /* Largura do botão */
+  height: 5vh; /* Altura do botão */
+  margin-left: 30px; /* Espaçamento à esquerda */
+}
+
+/* Linha animada no botão */
+header button::after {
+  content: ""; /* Adiciona conteúdo vazio */
+  position: absolute; /* Define posição absoluta */
+  left: 0; /* Alinha à esquerda */
+  right: 0; /* Alinha à direita */
+  bottom: 0; /* Alinha na parte inferior */
+  height: 2px; /* Altura da linha */
+  background-color: rgba(190, 73, 73, 0); /* Cor da linha */
+  transform: scaleX(0); /* Oculta a linha inicialmente */
+  transform-origin: bottom right; /* Origem da animação */
+  transition: transform 0.8s; /* Animação suave */
+}
+
+/* Animação ao passar o mouse no botão */
+header button:hover::after {
+  transform: scaleX(1); /* Expande a linha */
+  transform-origin: bottom left; /* Origem da expansão */
+}
+
+/* Estilo dos ícones no cabeçalho */
+header i {
+  font-size: 20px; /* Tamanho dos ícones */
+  color: white; /* Cor dos ícones */
   margin-left: 16px; /* Espaçamento à esquerda */
 }
 
@@ -186,6 +334,7 @@ header .fa-phone:hover {
     display: none; /*Display: Nenhum*/
     position: fixed; /*Posição fixa na parte direita da página*/
     top: 0; /*Superior em 0 fazendo a caixa encostar ao topo*/
+    color: white;
     right: 0; /*Direita em 0 fazendo a caixa encostar a direita*/
     width: 60%; /*Largura em porcentagem da caixa*/
     height: 100%; /*Altura de 100% da tela*/

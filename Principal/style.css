@@ -107,7 +107,7 @@ header.scorlled .mobile-menu{
   color: white;
 }
 header.scrolled i{
-  color : black; /* Ícones pretos */
+  color : white; /* Ícones pretos */
 }
 header.scrolled nav{
   background-color: rgb(202, 199, 199);
