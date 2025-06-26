@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Intermed Data Center | Oficial</title>
+  <link rel="shortcut icon" href="/Principal/img/Logo da empresa (fundo removido)io.png" type="image/x-icon">
   <link rel="stylesheet" href="style.css"/>
    <!-- Script para carregar os ícones da biblioteca FontAwesome -->
     <script src="https://kit.fontawesome.com/b61a4ed80b.js"
       crossorigin="anonymous"></script>
-
+ <meta name="google-signin-client_id" content="SEU_CLIENT_ID_AQUI.apps.googleusercontent.com">
   <script src="script.js" defer></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -74,6 +76,9 @@
 
       </nav>
     </header>
+    <main>
+
+   
   <div class="container">
     <div class="login-section">
       <h1>Bem-Vindo!</h1>
@@ -87,8 +92,10 @@
 
       <div class="or">ou Continue com</div>
       <div class="social-login">
-        <button class="google"><i class="fa-brands fa-google" style="color: #ffffff;"></i></button>
+        <button class="google" onclick="loginComGoogleFalso()""><i class="fa-brands fa-google" style="color: #ffffff;"></i></button>
         <button class="apple"><i class="fa-brands fa-apple" style="color: #ffffff;"></i></button>
+        
+        
         <button class="facebook"><i class="fa-brands fa-facebook-f" style="color: #ffffff;"></i></button>
       </div>
       <p class="register">Não é membro? <a href="#">Cadastre-se.</a></p>
@@ -102,5 +109,6 @@
       <p class="subtitle">Medicina que  <strong>transforma</strong></p>
     </div>
   </div>
+ </main>
 </body>
 </html>
