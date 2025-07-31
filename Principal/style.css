@@ -350,11 +350,15 @@ body.menu-open .hamburger {
 
 .sect3{
   padding: 6rem; /* Espaçamento interno */
-  background-color: white; /* Cor de fundo */
+  background-color: rgb(255, 255, 255); /* Cor de fundo */
   display: flex; /* Define layout flexível */
   text-align: center; /* Centraliza o texto */
   gap: 100px; /* Espaçamento entre os itens */
   /* Distribui os itens uniformemente */
+}
+.sect3 .card{
+  border: none !important; /* Remove borda */
+  box-shadow: none !important;
 }
 .texto1{
   display: flex;
@@ -433,7 +437,7 @@ footer {
 #email {
   background-color: #cccccc; /* Cor de fundo */
   color: #333; /* Cor do texto */
-  border: 1px solid #ccc; /* Borda */
+  border: 10px solid #ccc; /* Borda */
   padding: 10px; /* Espaçamento interno */
   border-radius: 5px; /* Bordas arredondadas */
   width: 250px; /* Largura */

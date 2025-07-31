@@ -28,6 +28,11 @@ ScrollReveal().reveal('.img1',{
     origin: 'right', // origem do efeito: o conteudo virá da direita para a esquerda
     distance : '50px', // distancia que o elemento "viaja" antes de aparecer
 })
+ScrollReveal().reveal('.col-md-4',{
+    duration: 1000, // duração do efeito (em milisegundos), define a velocidade da transição
+    origin: 'right', // origem do efeito: o conteudo virá da direita para a esquerda
+    distance : '50px', // distancia que o elemento "viaja" antes de aparecer
+})
 document.addEventListener("DOMContentLoaded", () => {
     const header = document.querySelector("header");
     const firstSection = document.querySelector(".sect1");
