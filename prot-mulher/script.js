@@ -76,13 +76,13 @@ function moveCarousel() {
             track.style.transform = `translateX(0)`; // Move para a primeira imagem
             
 
-        }, 500);//tempo suficiente para completar a transição visivel
+        }, 800);//tempo suficiente para completar a transição visivel
         
     } else {
         //Caso o indice ainda nao tenha atingido o final, move o carrossel para a proxima imagem
 
         //adiciona uma transição suave de 0.5 segundos para o movimento do carrossel
-        track.style.transition = 'transform 0.5s ease' // move o carrossel para a esquerda, usando o indice atual para calcular o deslocamento
+        track.style.transition = 'transform 1s ease' // move o carrossel para a esquerda, usando o indice atual para calcular o deslocamento
         
         //exemplo: se index = 1, desloca -100%, se index = 2, desloca -200%, etc.
         track.style.transform = `translateX(-${index * 100}%)`; //desloca o carrossel
@@ -91,4 +91,4 @@ function moveCarousel() {
 
 //define um intervalo para chamar a funçao moveCarousel a cada 3000 milissegundos (3 segundos)
 // Isso faz com que o carrossel se mova automaticamente a cada 1 segundo
-setInterval(moveCarousel, 1000);
+setInterval(moveCarousel, 3000);
