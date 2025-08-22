@@ -1,14 +1,304 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-}
+/* configuraçoes basicas para respiro do site */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos padrão */
+    box-sizing: border-box; /* Inclui bordas e padding no tamanho total dos elementos */
+    list-style: none; /* Remove estilos de lista */
+    text-decoration: none; /* Remove sublinhados de links */
+  }
+  
+  /* Importação de fontes externas */
+  
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+  
+  
+  /* Estilo do cabeçalho */
+  header {
+    z-index: 999; /* Garante que o cabeçalho fique acima de outros elementos */
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar a página */
+    background-color: #95def5; /* Cor de fundo do cabeçalho */
+    left: 0; /* Alinha o cabeçalho à esquerda */
+    padding: 10px; /* Espaçamento interno */
+    height: 1px; /* Altura do cabeçalho */
+    align-items: center; /* Alinha os itens verticalmente */
+  }
+  
+  /* Estilo da barra de navegação */
+  header nav {
+    margin-left: 10px; /* Espaçamento à esquerda */
+    display: flex; /* Define layout flexível */
+    gap: px; /* Espaçamento entre os itens */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 30px; /* Espaçamento superior */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-around; /* Distribui os itens uniformemente */
+  }
+  
+  /* Links dentro da barra de navegação */
+  header nav div a {
+    margin-left: 20px; /* Espaçamento à esquerda */
+    font-size: 16px; /* Tamanho da fonte */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+  }
+  
+  /* Estilo do título no cabeçalho */
+  header h3 {
+    color: white; /* Cor do texto */
+    font-size: 25px; /* Tamanho da fonte */
+    margin-top: 7px; /* Espaçamento superior */
+    margin-left: 30px;
+  }
+  
+  /* Estilo da imagem no cabeçalho */
+  header img {
+    width: 60px; /* Largura da imagem */
+    border-radius: 200px; /* Bordas arredondadas */
+  }
+  /* Estilo do cabeçalho fixo */
+  header {
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #95def5; /* Fundo branco */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .mb-4 {
+    color: rgba(245, 222, 179, 0);
+  }
+  .mobile-menu{
+    color: rgb(255, 255, 255);
+  }
+  .mobile-menu nav ul li a {
+    color: #fff !important;
+  }
+  header  .mobile-menu a {
+    color: #ffffff !important;
+  }
+  .mobile-menu nav ul li a {
+    color: #fff !important;
+  }
+  body.mobile-menu .fas  {
+    color: #ffffff !important;
+  }
+  .mobile-menu .fas {
+    color: rgb(255, 255, 255);
+  }
+  header button .fas{
+    color: #fff !important;
+  }
+  
+  header  .mobile-menu .fas {
+    color: #ffffff !important;
+  }
+  
+  body.menu-open .mobile-menu .fas {
+    color: #ffffff !important;
+  }
+  
+  
+  /* Estilo para o cabeçalho ao rolar */
+  header  {
+    background-color: rgba(0, 174, 255, 0); /* Fundo permanece branco */
+    color: black; /* Texto preto */
+  
+  }
+  header.scorlled .mobile-menu{
+    color: white;
+  }
+  header  i{
+    color : white; /* Ícones pretos */
+  }
+  header  nav{
+    background-color: rgb(202, 199, 199);
+    border-radius: 15px;
+    padding: 10px;
+    
+    margin-top: -10px;
+  }
+  header  h3 {
+    color: black; /* Texto preto */
+  }
+  
+  /* Ajuste para os links no estado inicial */
+  header a {
+    color: black; /* Texto preto */
+  }
+  
+  /* Ajuste para os links no estado scrolled */
+  header  a {
+    color: black; /* Texto preto */
+  }
+  
+  /* Estilo para listas no cabeçalho e rodapé */
+  a {
+    position: relative; /* Define posição relativa */
+    padding: 10px 0; /* Espaçamento interno */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    transition: color 0.3s; /* Transição suave para a cor */
+  }
+  
+  /* Linha oculta inicialmente nos links */
+   a::after {
+    content: ""; /* Adiciona conteúdo vazio */
+    position: absolute; /* Define posição absoluta */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    bottom: 0; /* Alinha na parte inferior */
+    height: 2px; /* Altura da linha */
+    background-color: rgb(0, 204, 255); /* Cor da linha */
+    transform: scaleX(0); /* Oculta a linha inicialmente */
+    transform-origin: bottom right; /* Origem da animação */
+    transition: transform 0.3s; /* Animação suave */
+  }
+  
+  /* Animação ao passar o mouse nos links */
+   a:hover::after {
+    transform: scaleX(1); /* Expande a linha */
+    transform-origin: bottom left; /* Origem da expansão */
+  }
+  
+  /* Estilo do botão de cadastro */
+  header button {
+    color: white; /* Cor do texto */
+    position: relative; /* Define posição relativa */
+    background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    transition: color 0.3s; /* Transição suave para a cor */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 7vw; /* Largura do botão */
+    height: 5vh; /* Altura do botão */
+    margin-left: 30px; /* Espaçamento à esquerda */
+  }
+  
+  /* Linha animada no botão */
+  header button::after {
+    content: ""; /* Adiciona conteúdo vazio */
+    position: absolute; /* Define posição absoluta */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    bottom: 0; /* Alinha na parte inferior */
+    height: 2px; /* Altura da linha */
+    background-color: rgba(190, 73, 73, 0); /* Cor da linha */
+    transform: scaleX(0); /* Oculta a linha inicialmente */
+    transform-origin: bottom right; /* Origem da animação */
+    transition: transform 0.8s; /* Animação suave */
+  }
+  
+  /* Animação ao passar o mouse no botão */
+  header button:hover::after {
+    transform: scaleX(1); /* Expande a linha */
+    transform-origin: bottom left; /* Origem da expansão */
+  }
+  
+  /* Estilo dos ícones no cabeçalho */
+  header i {
+    font-size: 20px; /* Tamanho dos ícones */
+    color: white; /* Cor dos ícones */
+    margin-left: 16px; /* Espaçamento à esquerda */
+  }
+  
+  /* Animação ao passar o mouse nos ícones */
+  header .fa-whatsapp:hover {
+    transition: 1s; /* Transição suave */
+    color: green; /* Cor ao passar o mouse */
+  }
+  header .fa-envelope:hover {
+    transition: 1s; /* Transição suave */
+    color: blue; /* Cor ao passar o mouse */
+  }
+  header .fa-phone:hover {
+    transition: 1s; /* Transição suave */
+    color: rgb(0, 221, 255); /* Cor ao passar o mouse */
+  }
+  
+  /* HAMBURGER DO MOBILE */
+  /* =====================================CAIXA MOBILE===================================== */
+  .mobile-menu { /*Estilização da caixa Mobile quando aberta*/
+      display: none; /*Display: Nenhum*/
+      position: fixed; /*Posição fixa na parte direita da página*/
+      top: 0; /*Superior em 0 fazendo a caixa encostar ao topo*/
+      right: 0; /*Direita em 0 fazendo a caixa encostar a direita*/
+      width: 60%; /*Largura em porcentagem da caixa*/
+      height: 100%; /*Altura de 100% da tela*/
+      background-color: #0b0b0d; /*Cor de fundo*/
+      flex-direction: column; /*direção dos itens dentro da caixa */
+      align-items: center; /*Alinhamento na vertical do itens*/
+      font-size: 1.8rem; /*tamanho da letra dentro da caixa*/
+  }
+  
+  .nav-links-mobile { /*Lista não ordenada da versão mobile*/
+      display: flex; /*Tornando os itens (LISTAS) flexíveis*/
+      flex-direction: column; /*Estamos direcionando o posicionamento dessas listas*/
+      text-align: center; /*Alinhando o texto ao centro*/
+      gap: 1.2rem; /*Espaço entre as listas */
+      list-style: none; /*Estilo de lista desabilitado*/
+  }
+  
+  .nav-links-mobile li { /*listas da versão Mobile*/
+      border-bottom: 1px solid #787272; /*Bordar inferior de cada lista*/
+      padding-bottom: 1.2rem; /*Tamanho da borda*/
+  }
+  
+  
+  .hamburger,
+  .close {
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: none;
+      margin-right: 20px;
+  }
+  
+  
+  .close {
+      margin-top: 20px;
+      margin-right: 20px;
+      display: block;
+      align-self: end;
+  }
+  
+  
+  .flex {
+      display: flex;
+  }
+  /* ...existing code... */
+  
+  /* Exibe o botão hambúrguer em telas pequenas */
+  @media (max-width: 900px) {
+    .hamburger {
+      display: block;
+    }
+    .ocultar-mobile {
+      display: none; /* Esconde só o menu desktop */
+    }
+    header .conteudo{
+      display: none;
+      
+    }
+    header {
+      height: 130px;
+    }
+    
+  /* Esconde o hambúrguer quando o menu está aberto */
+  body.menu-open .hamburger {
+    display: none !important;
+  }
+  }
+  
+  
+  
+  /* FINAL */
+  
 
 .site-container {
     max-width: 1200px;
     margin: 40px auto;
+    margin-top: 50px;
     display: flex;
     justify-content: space-between;
     gap: 40px;
@@ -25,6 +315,7 @@ body {
 .sidebar {
     flex: 1;
     padding: 20px;
+    margin-top: 50px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
@@ -177,3 +468,104 @@ body {
     max-width: 100%;
     height: auto;
 }
+footer {
+    background-color: rgb(79, 79, 79); /* Cor de fundo */
+    padding: 30px; /* Espaçamento interno */
+    gap: 90px; /* Espaçamento entre os itens */
+    color: white; /* Cor do texto */
+  }
+  .div-pai {
+    display: flex; /* Define layout flexível */
+    align-items: center; /* Alinha os itens verticalmente */
+    margin-top: 20px; /* Espaçamento superior */
+    gap: 200px; /* Espaçamento entre os itens */
+  }
+  /* Linha horizontal no rodapé */
+  .footer-line {
+    border: none; /* Remove borda padrão */
+    border-top: 2px solid #ccc; /* Linha superior */
+    margin: 20px 0; /* Espaçamento acima e abaixo */
+    width: 100%; /* Largura total */
+  }
+  /* Estilo do container do logo */
+  .logo-container {
+    display: flex; /* Define layout flexível */
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 10px; /* Espaçamento entre os itens */
+  }
+  
+  /* Estilo da imagem no logo */
+  .logo-container img {
+    width: 60px; /* Largura da imagem */
+    height: auto; /* Altura automática */
+  }
+  
+  /* Estilo do texto e ícones no logo */
+  .text-and-icons {
+    display: flex; /* Define layout flexível */
+    flex-direction: column; /* Organiza os itens em coluna */
+    align-items: flex-start; /* Alinha os itens à esquerda */
+  }
+  
+  /* Estilo do texto no logo */
+  .text-and-icons p {
+    margin: 0; /* Remove margens padrão */
+    font-size: 16px; /* Tamanho da fonte */
+  }
+  
+  /* Estilo dos ícones no logo */
+  .icons {
+    display: flex; /* Define layout flexível */
+    gap: 10px; /* Espaçamento entre os ícones */
+    margin-top: 5px; /* Espaçamento superior */
+  }
+  
+  /* Estilo individual dos ícones */
+  .icons a i {
+    font-size: 10px; /* Tamanho dos ícones */
+    color: white; /* Cor dos ícones */
+  }
+  #email {
+    background-color: #cccccc; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    border: 1px solid #ccc; /* Borda */
+    padding: 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    width: 250px; /* Largura */
+  }
+  
+  /* Estilo do botão de envio */
+  button[type="submit"] {
+    background-color: #5a81ce; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Remove borda */
+    padding: 11px 22px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    font-size: 16px; /* Tamanho da fonte */
+    align-items: center;
+  }
+  
+  /* Animação ao passar o mouse no botão */
+  button[type="submit"]:hover {
+    background-color: #37548e; /* Cor ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave */
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .main-content {
+          grid-template-columns: 1fr;
+      }
+      
+      .sidebar {
+          grid-column: 1 / 2;
+      }
+  
+      .cards-container {
+          grid-template-columns: 1fr;
+      }
+  
+   
+   
+  }

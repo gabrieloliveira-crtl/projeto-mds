@@ -8,18 +8,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+      <!-- Cabeçalho do site -->
+      <header class="cabeçalho">
+
+        <nav>
+  
+          <!-- FINAL -->
+          <!-- Logotipo da empresa -->
+          <a href><img src="img/Logo da empresa (fundo removido)io.png" alt
+              loading="lazy"></a>
+          <!-- Nome da empresa -->
+          <h3>Intermed Center</h3>
+          <!-- Links de navegação para diferentes seções do site -->
+          <div class="conteudo">
+            <a href="../educação/index.html">Educação</a>
+            <a href>Localização</a>
+            <a href>Proteção Feminina</a>
+            <a href>Emergencia</a>
+            <a href>Junte-se</a>
+            <a href>Apoio</a>
+          </div>
+          <!-- Ícones de contato (WhatsApp, email e telefone) -->
+          <div class="conteudo">
+            <a href><i class="fa-brands fa-whatsapp"></i></a>
+            <a href><i class="fa-solid fa-envelope"></i></a>
+            <a href><i class="fa-solid fa-phone"></i></a>
+            <a href="casatros/index.html"><i class="fa-solid fa-circle-user"></i></a>
+          </div>
+  
+          <!-- CAIXA MOBILE -->
+          <div class="mobile-menu" id="mobileMenu">
+  
+            <!-- Botão para ser utilizado para fechamento da lista -->
+            <button id="closeButton" class="close">
+              <i class="fas fa-times"></i>
+            </button>
+  
+            <!-- Essa lista é do Menu Hamburguer quando estiver aberto. -->
+            <ul class="nav-links-mobile">
+              <li><a href="../educação/index.html">Educação</a></li>
+              <li><a href>Localização</a></li>
+              <li> <a href>Proteção Feminina</a></li>
+              <li> <a href>Emergencia</a></li>
+              <li> <a href>Junte-se</a></li>
+              <li> <a href>Apoio</a></li>
+              <li><a href="casatros/index.html">Cadatre-se <i class="fa-solid fa-circle-user"></i></a></li>
+            </ul>
+  
+            <!-- Fim da caixa do Menu Hamburguer (Quando estiver aberto) -->
+          </div>
+  
+          <!-- Botão de Hamburguer, ele está fora da Div justamente por ser um elemento singular -->
+          <button class="hamburger" id="hamburgerButton">
+            <i class="fas fa-bars"></i>
+          </button>
+  
+          <!-- FINAL -->
+  
+          <!-- FINAL -->
+  
+        </nav>
+      </header>
 
     <div class="site-container">
-        <header class="blog-header">
-            <h1 class="blog-title">TITLE OF THE BLOG POST</h1>
-            <div class="header-right">
-                <p>Search the Site...</p>
-                <input type="text" class="search-box">
-            </div>
+   
         </header>
 
         <div class="main-content-wrapper">
             <main class="main-content">
+                <h1>titule</h1>
                 <p class="post-categories">CATEGORY 1, CATEGORY 2</p>
                 <div class="post-image-container">
                     <img src="https://i.ibb.co/30X83Yt/image.jpg" alt="Pessoa fazendo uma receita" class="post-main-image">
@@ -57,6 +114,52 @@
             </aside>
         </div>
     </div>
+
+    <footer>
+        <div class="div-pai">
+          <!-- Logo e ícones no rodapé -->
+          <div class="logo-container">
+            <img src="img/Logo da empresa (fundo removido)io.png" alt="" loading="lazy">
+            <div class="text-and-icons">
+              <p>IDC</p>
+              <div class="icons">
+                <a href="">
+                  <i class="fa-brands fa-whatsapp icones"></i>
+                </a>
+                <a href="">
+                  <i class="fa-solid fa-envelope icones"></i>
+                </a>
+                <a href="">
+                  <i class="fa-solid fa-phone icones"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        
+          <!-- Informações de contato -->
+          <div class="div1">
+            <h3>Intermed Data Center</h3>
+            <p>Rua dos médicos, 123 - Centro - São Paulo - SP</p>
+            <p>Telefone: (11) 1234-5678</p>
+            <p>Email:</p>
+          </div>
+          
+          <!-- Formulário de inscrição -->
+          <div class="div2">
+            <h3>Inscreva-Se</h3>
+            <p>Acesse o Email e receba notificações sobre nossos projetos</p>
+            <form action="">
+              <input type="text" placeholder="Digite seu email" id="email">
+              <button type="submit"><img src="img/mail (1).png" alt="" id="email1">Enviar</button>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Linha horizontal no rodapé -->
+        <hr class="footer-line">
+        <p>&copy; 2025 Projeto MDS - Educação em Saúde</p>
+  
+      </footer>
 
 </body>
 </html>

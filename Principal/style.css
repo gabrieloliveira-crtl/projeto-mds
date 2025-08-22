@@ -347,7 +347,9 @@ body.menu-open .hamburger {
   width: 30em; /* Largura da imagem */
   border-radius: 15px; /* Bordas arredondadas */
 }
-
+.container{
+  flex-direction: column;
+}
 
 .sect3{
   padding: 6rem; /* Espaçamento interno */
