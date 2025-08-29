@@ -16,7 +16,7 @@
 header {
   z-index: 999; /* Garante que o cabeçalho fique acima de outros elementos */
   position: sticky; /* Fixa o cabeçalho no topo ao rolar a página */
-  background-color: #95def5; /* Cor de fundo do cabeçalho */
+  background-color: #d6b1f3; /* Cor de fundo do cabeçalho */
   left: 0; /* Alinha o cabeçalho à esquerda */
   padding: 10px; /* Espaçamento interno */
   height: 1px; /* Altura do cabeçalho */
@@ -60,7 +60,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #95def5; /* Fundo branco */
+  background-color: #d6b1f3; /* Fundo branco */
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -147,7 +147,7 @@ a {
   right: 0; /* Alinha à direita */
   bottom: 0; /* Alinha na parte inferior */
   height: 2px; /* Altura da linha */
-  background-color: rgb(0, 204, 255); /* Cor da linha */
+  background-color: #d6b1f3; /* Cor da linha */
   transform: scaleX(0); /* Oculta a linha inicialmente */
   transform-origin: bottom right; /* Origem da animação */
   transition: transform 0.3s; /* Animação suave */
@@ -313,7 +313,7 @@ body{
 }
 /* Estilo do título na primeira seção */
 .sect1 h2 {
-  color: #95def5; /* Cor do texto */
+  color: #d6b1f3; /* Cor do texto */
   font-size: 39px; /* Tamanho da fonte */
 }
 
@@ -362,10 +362,14 @@ img{
     grid-column: 1 / 2;
     background-color: #fff;
     padding: 0px;
-    border: 1px solid #ddd;
     border-radius: 8px;
 }
-
+.card-image1,.card-image2,.card-image3{
+    border-radius: 8px 8px 0 0;
+}
+.card div{
+  height: 200px;
+}
 .carousel {
     position: relative;
     display: flex;
@@ -402,18 +406,17 @@ img{
     grid-column: 2 / 3;
     background-color: #fff;
     padding: 20px;
-    border: 1px solid #ddd;
+    font-size: 18px;
     border-radius: 8px;
 }
 
 .sidebar h3 {
-    margin-top: 0;
+    margin-bottom: 10px;
 }
 
 .article-item {
     margin-bottom: 15px;
     padding-bottom: 15px;
-    border-bottom: 1px solid #eee;
 }
 
 .article-item:last-child {
@@ -428,7 +431,6 @@ img{
     height: 350px;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.906) 100%, rgba(255, 255, 255, 0.925) 3.77%), url(img/fundomao.jpg);
     padding: 20px;
-    border: 1px solid #ddd;
     border-radius: 8px;
 }
 
@@ -450,7 +452,6 @@ img{
 
 .card {
     background-color: #fff;
-    border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
 }
@@ -525,12 +526,18 @@ footer {
   
 }
 .body h2{
-  font-size: 24px; /* Tamanho da fonte */
   margin-bottom: 10px; /* Espaçamento inferior */
 }
-.card-image1 h3{
+.body{
+  font-size: 18.6px;
+}
+.textdiv{
+  font-size: 18px;
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+.card-image2 h3{
 margin-bottom: 10px;
-font-size: 18px; /* Tamanho da fonte */
+font-size: 38px; /* Tamanho da fonte */
 }
 /* Estilo dos ícones no logo */
 .icons {
@@ -538,7 +545,16 @@ font-size: 18px; /* Tamanho da fonte */
   gap: 10px; /* Espaçamento entre os ícones */
   margin-top: 5px; /* Espaçamento superior */
 }
-
+#email1{
+  width: 30px;
+}
+form{
+  display: flex;
+  gap: 10px;
+}
+.div2{
+margin-bottom: 30px;
+}
 /* Estilo individual dos ícones */
 .icons a i {
   font-size: 10px; /* Tamanho dos ícones */
@@ -555,19 +571,20 @@ font-size: 18px; /* Tamanho da fonte */
 
 /* Estilo do botão de envio */
 button[type="submit"] {
-  background-color: #5a81ce; /* Cor de fundo */
+  background-color: #d6b1f3; /* Cor de fundo */
   color: white; /* Cor do texto */
   border: none; /* Remove borda */
-  padding: 11px 22px; /* Espaçamento interno */
+  padding: 11px 15px; /* Espaçamento interno */
   border-radius: 5px; /* Bordas arredondadas */
   cursor: pointer; /* Define o cursor como ponteiro */
   font-size: 16px; /* Tamanho da fonte */
   align-items: center;
+  display: flex;
 }
 
 /* Animação ao passar o mouse no botão */
 button[type="submit"]:hover {
-  background-color: #37548e; /* Cor ao passar o mouse */
+  background-color: #8c43c4; /* Cor ao passar o mouse */
   transition: background-color 0.3s; /* Transição suave */
 }
 
