@@ -10,6 +10,10 @@
 /* Importação de fontes externas */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+body{
+  font-weight: 50;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 
 /* Estilo do cabeçalho */
@@ -27,7 +31,6 @@ header {
 header nav {
   margin-left: 10px; /* Espaçamento à esquerda */
   display: flex; /* Define layout flexível */
-  gap: px; /* Espaçamento entre os itens */
   text-align: center; /* Centraliza o texto */
   margin-top: 30px; /* Espaçamento superior */
   align-items: center; /* Alinha os itens verticalmente */
@@ -296,9 +299,7 @@ body.menu-open .hamburger {
 
 
 /* FINAL */
-body{
-   font-family: "Roboto", sans-serif;
-}
+
 
 
 .sect1 {
@@ -543,6 +544,7 @@ font-size: 38px; /* Tamanho da fonte */
 .icons {
   display: flex; /* Define layout flexível */
   gap: 10px; /* Espaçamento entre os ícones */
+  
   margin-top: 5px; /* Espaçamento superior */
 }
 #email1{
