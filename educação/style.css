@@ -920,3 +920,80 @@ button[type="submit"]:hover {
   margin-right: 10px;
 }
 
+
+/* HAMBURGER DO MOBILE */
+/* =====================================CAIXA MOBILE===================================== */
+.mobile-menu { /*Estilização da caixa Mobile quando aberta*/
+    display: none; /*Display: Nenhum*/
+    position: fixed; /*Posição fixa na parte direita da página*/
+    top: 0; /*Superior em 0 fazendo a caixa encostar ao topo*/
+    right: 0; /*Direita em 0 fazendo a caixa encostar a direita*/
+    width: 60%; /*Largura em porcentagem da caixa*/
+    height: 100%; /*Altura de 100% da tela*/
+    background-color: #0b0b0d; /*Cor de fundo*/
+    flex-direction: column; /*direção dos itens dentro da caixa */
+    align-items: center; /*Alinhamento na vertical do itens*/
+    font-size: 1.8rem; /*tamanho da letra dentro da caixa*/
+}
+
+.nav-links-mobile { /*Lista não ordenada da versão mobile*/
+    display: flex; /*Tornando os itens (LISTAS) flexíveis*/
+    flex-direction: column; /*Estamos direcionando o posicionamento dessas listas*/
+    text-align: center; /*Alinhando o texto ao centro*/
+    gap: 1.2rem; /*Espaço entre as listas */
+    list-style: none; /*Estilo de lista desabilitado*/
+}
+
+.nav-links-mobile li { /*listas da versão Mobile*/
+    border-bottom: 1px solid #787272; /*Bordar inferior de cada lista*/
+    padding-bottom: 1.2rem; /*Tamanho da borda*/
+}
+
+
+.hamburger,
+.close {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
+    margin-right: 20px;
+}
+
+
+.close {
+    margin-top: 20px;
+    margin-right: 20px;
+    display: block;
+    align-self: end;
+}
+
+
+.flex {
+    display: flex;
+}
+/* ...existing code... */
+
+/* Exibe o botão hambúrguer em telas pequenas */
+@media (max-width: 900px) {
+  .hamburger {
+    display: block;
+  }
+  .ocultar-mobile {
+    display: none; /* Esconde só o menu desktop */
+  }
+  header .conteudo{
+    display: none;
+    
+  }
+  header {
+    height: 130px;
+  }
+  
+/* Esconde o hambúrguer quando o menu está aberto */
+body.menu-open .hamburger {
+  display: none !important;
+}
+}
+/* FINAL */

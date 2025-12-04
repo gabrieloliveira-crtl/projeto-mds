@@ -5,13 +5,8 @@
   box-sizing: border-box; /* Inclui bordas e padding no tamanho total dos elementos */
   list-style: none; /* Remove estilos de lista */
   text-decoration: none; /* Remove sublinhados de links */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte padrão */
 }
-
-/* Importação de fontes externas */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Pacifico&family=Questrial&display=swap');
-
-/* Estilo do cabeçalho */
 header {
   z-index: 999; /* Garante que o cabeçalho fique acima de outros elementos */
   position: sticky; /* Fixa o cabeçalho no topo ao rolar a página */
@@ -291,96 +286,45 @@ body.menu-open .hamburger {
 
 /* FINAL */
 
-
-/* Estilo da primeira seção */
-.sect1 {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.509) 100%, rgba(0, 0, 0, 0.459) 3.77%), url(carrossel/medicina\ 2.jpg); /* Fundo com gradiente e imagem */
-  padding: 21vw; /* Espaçamento interno */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Não repete a imagem */
-  background-size: cover; /* Cobre todo o espaço disponível */
-  align-items: center; /* Alinha os itens verticalmente */
-  text-align: center; /* Centraliza o texto */
-  font-size: 30px; /* Tamanho da fonte */
-  
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    background: linear-gradient(90deg, #780bdd, #0ab0b6);
+    border-radius: 40px;
+    margin: 10px;
+    color: white;
 }
 
-/* Estilo do título na primeira seção */
-.sect1 h2 {
-  color: #95def5; /* Cor do texto */
-  font-size: 39px; /* Tamanho da fonte */
+.hero-content {
+    max-width: 45%;
 }
 
-/* Estilo do parágrafo na primeira seção */
-.sect1 p {
-  color: white; /* Cor do texto */
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-
-/* Estilo da segunda seção */
-.sect2 {
-  padding: 6rem; /* Espaçamento interno */
-  height: 37rem; /* Altura da seção */
-  background-color: white; /* Cor de fundo */
-  display: flex; /* Define layout flexível */
-  text-align: center; /* Centraliza o texto */
-  align-items: center; /* Alinha os itens verticalmente */
-  gap: 100px; /* Espaçamento entre os itens */
-  justify-content: space-between; /* Distribui os itens uniformemente */
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
-/* Estilo do texto na segunda seção */
-.sect2 #texto {
-  width: 28rem; /* Largura do texto */
-  height: auto; /* Altura automática */
-  color: black; /* Cor do texto */
-  font-weight: 500; /* Peso da fonte */
+.cta {
+    display: inline-block;
+    background: white;
+    color: #078a9b;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* Estilo do título no texto da segunda seção */
-#texto h3 {
-  color: #067eca; /* Cor do texto */
-}
-
-/* Estilo da imagem na segunda seção */
-.sect2 #img img {
-  width: 30em; /* Largura da imagem */
-  border-radius: 15px; /* Bordas arredondadas */
-}
-.container{
-  flex-direction: column;
-}
-
-.sect3{
-  padding: 6rem; /* Espaçamento interno */
-  background-color: rgb(255, 255, 255); /* Cor de fundo */
-  display: flex; /* Define layout flexível */
-  text-align: center; /* Centraliza o texto */
-  gap: 100px; /* Espaçamento entre os itens */
-  /* Distribui os itens uniformemente */
-}
-
-.sect3 .card{
-  border: none !important; /* Remove borda */
-  box-shadow: none !important;
-}
-.card{
-  width: 480px;
-  flex-wrap: wrap;
-}
-@media (max-width: 1024px) {
-  .card{
-    width: 350px;
-  }
-}
-.texto1{
-  display: flex;
-  gap: 20px; /* Espaçamento entre os itens */
-
-}
-.texto1 img{
-  width: 40em; /* Largura da imagem */
-  border-radius: 15px;
+.hero-image img {
+    width: 380px;
 }
 
 /* Estilo do rodapé */
@@ -486,263 +430,5 @@ button[type="submit"]:hover {
   width: 25px;
   margin-right: 10px;
 }
-
-/* ...existing code... */
-@media (max-width: 768px) {
-  .sect2 {
-    flex-direction: column-reverse;
-    padding: 5rem;
-    gap: 30px;
-    text-align: center;
-    margin-bottom: 100px;
-  }
-  .sect2{
-    flex-direction: column-reverse;
-  }
-
-  .sect2 #texto,
-  .sect2 #img {
-    flex: 1 1 100%;
-  }
-  
-  .sect2 #img img {
-    max-width: 100%;
-  }
- 
-  /* Terceira seção */
-  .sect3 {
-    flex-direction: column-reverse;
-    padding: 2rem;
-    margin: 100px 0px;
-    gap: 30px;
-  }
-
-  .texto1 {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .texto1 img {
-    width: 100%;
-  }
-
-  /* Rodapé */
-  .div-pai {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .logo-container img {
-    width: 45px;
-  }
-
-  #email {
-    width: 100%;
-  }
-
-  button[type="submit"] {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .text-and-icons p {
-    font-size: 14px;
-  }
-
-  .icons a i {
-    font-size: 18px;
-  }
-
-  /* Botão flutuante */
-  button#theme-toggle {
-    font-size: 24px;
-    padding: 10px;
-    bottom: 15px;
-    right: 15px;
-  }
- 
-}
-/* ...existing code... */
-@media (max-width: 400px) {
-  .sect2 {
-    flex-direction: column-reverse;
-    padding: 2rem;
-    margin: 90px 0px;
-    gap: 30px;
-    text-align: center;
-    margin-top: 150px;
-  }
-  .junt{
-    margin-top: -40px;
-  }
-  .femi{
-    margin-top: -60px;
-  }
-  .educ{
-    margin-top: -80px;
-  }
- 
-
-
-  .sect2 #texto,
-  .sect2 #img {
-    flex: 1 1 100%;
-  }
-  
-  .sect2 #img img {
-    max-width: 100%;
-  }
- 
-  /* Terceira seção */
-  .sect3 {
-    flex-direction: column;
-    padding: 2rem;
-    margin-top: -100px;
-    gap: 30px;
-  }
-
-  .texto1 {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .texto1 img {
-    width: 100%;
-  }
-
-  /* Rodapé */
-  .div-pai {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .sect3{
-    margin-top: -100px;
-  }
-
-  .logo-container img {
-    width: 45px;
-  }
-
-  #email {
-    width: 100%;
-  }
-
-  button[type="submit"] {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .text-and-icons p {
-    font-size: 14px;
-  }
-
-  .icons a i {
-    font-size: 18px;
-  }
-
-  /* Botão flutuante */
-  button#theme-toggle {
-    font-size: 24px;
-    padding: 10px;
-    bottom: 15px;
-    right: 15px;
-  }
- 
-}
-
-@media (max-width: 500px) {
-  .sect2 {
-    flex-direction: column-reverse;
-    padding: 2rem;
-    gap: 30px;
-    text-align: center;
-    margin-top: 200px;
-  }
-  .junt{
-    margin-top: -40px;
-  }
-  .femi{
-    margin-top: -60px;
-  }
-  .educ{
-    margin-top: -80px;
-  }
- 
-
-
-  .sect2 #texto,
-  .sect2 #img {
-    flex: 1 1 100%;
-  }
-  
-  .sect2 #img img {
-    max-width: 100%;
-  }
- 
-  /* Terceira seção */
-  .sect3 {
-    flex-direction: column;
-    padding: 2rem;
-    margin-top: -100px;
-    gap: 30px;
-  }
-
-  .texto1 {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .texto1 img {
-    width: 100%;
-  }
-
-  /* Rodapé */
-  .div-pai {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .sect3{
-    margin-top: -100px;
-  }
-
-  .logo-container img {
-    width: 45px;
-  }
-
-  #email {
-    width: 100%;
-  }
-
-  button[type="submit"] {
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .text-and-icons p {
-    font-size: 14px;
-  }
-
-  .icons a i {
-    font-size: 18px;
-  }
-
-  /* Botão flutuante */
-  button#theme-toggle {
-    font-size: 24px;
-    padding: 10px;
-    bottom: 15px;
-    right: 15px;
-  }
- 
-}
-
-
-
-
-
-
-
-
-
 
 
