@@ -1,0 +1,828 @@
+body
+{
+    background-color: #f5f6fa;
+    font-family: 'Roboto', sans-serif;
+}
+  /* Estilo do cabeçalho */
+  header {
+    z-index: 999; /* Garante que o cabeçalho fique acima de outros elementos */
+    position: sticky; /* Fixa o cabeçalho no topo ao rolar a página */
+    background-color: #95def5; /* Cor de fundo do cabeçalho */
+    left: 0; /* Alinha o cabeçalho à esquerda */
+    padding: 10px; /* Espaçamento interno */
+    height: 1px; /* Altura do cabeçalho */
+    align-items: center; /* Alinha os itens verticalmente */
+  }
+  
+  /* Estilo da barra de navegação */
+  header nav {
+    margin-left: px; /* Espaçamento à esquerda */
+    display: flex; /* Define layout flexível */
+    gap: px; /* Espaçamento entre os itens */
+    text-align: center; /* Centraliza o texto */
+    margin-top: 30px; /* Espaçamento superior */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-around; /* Distribui os itens uniformemente */
+  }
+  header .conteudo{
+    color: black;
+  }
+  
+  /* Links dentro da barra de navegação */
+  header nav div a {
+    margin-left: 20px; /* Espaçamento à esquerda */
+    font-size: 17px; /* Tamanho da fonte */
+    color: rgb(0, 0, 0); /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+  }
+  
+  /* Estilo do título no cabeçalho */
+  header h3 {
+    color: white; /* Cor do texto */
+    font-size: 25px; /* Tamanho da fonte */
+    margin-top: 7px; /* Espaçamento superior */
+  }
+  
+  /* Estilo da imagem no cabeçalho */
+  header img {
+    width: 60px; /* Largura da imagem */
+    border-radius: 200px; /* Bordas arredondadas */
+  }
+  /* Estilo do cabeçalho fixo */
+  header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #95def5; /* Fundo branco */
+    color: black; /* Texto preto */
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Estilo para o cabeçalho ao rolar */
+  header {
+    background-color: rgba(0, 174, 255, 0); /* Fundo permanece branco */
+    color: black; /* Texto preto */
+  
+  }
+  header .mobile-menu{
+    color: white;
+  }
+  header i{
+    color : rgb(255, 255, 255); /* Ícones pretos */
+  }
+  header nav{
+    background-color: rgb(202, 199, 199);
+    border-radius: 15px;
+    margin-top: -10px;
+  }
+  header h3 {
+    color: rgb(0, 0, 0); /* Texto preto */
+  }
+  
+  /* Ajuste para os links no estado inicial */
+  header a {
+    color: rgb(255, 255, 255); /* Texto preto */
+  }
+  
+  /* Ajuste para os links no estado scrolled */
+  header a {
+    color: rgb(255, 255, 255); /* Texto preto */
+  }
+  header .nav-links-mobile{
+    color: white;
+  }
+  
+  /* Estilo para listas no cabeçalho e rodapé */
+  a {
+    position: relative; /* Define posição relativa */
+    padding: 10px 0; /* Espaçamento interno */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    transition: color 0.3s; /* Transição suave para a cor */
+  }
+  
+  /* Linha oculta inicialmente nos links */
+   a::after {
+    content: ""; /* Adiciona conteúdo vazio */
+    position: absolute; /* Define posição absoluta */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    bottom: 0; /* Alinha na parte inferior */
+    height: 2px; /* Altura da linha */
+    background-color: rgb(0, 204, 255); /* Cor da linha */
+    transform: scaleX(0); /* Oculta a linha inicialmente */
+    transform-origin: bottom right; /* Origem da animação */
+    transition: transform 0.3s; /* Animação suave */
+  }
+  
+  /* Animação ao passar o mouse nos links */
+   a:hover::after {
+    transform: scaleX(1); /* Expande a linha */
+    transform-origin: bottom left; /* Origem da expansão */
+  }
+  
+  /* Estilo do botão de cadastro */
+  header button {
+    color: rgb(0, 0, 0); /* Cor do texto */
+    position: relative; /* Define posição relativa */
+    background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    transition: color 0.3s; /* Transição suave para a cor */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 7vw; /* Largura do botão */
+    height: 5vh; /* Altura do botão */
+    margin-left: 30px; /* Espaçamento à esquerda */
+  }
+  
+  /* Linha animada no botão */
+  header button::after {
+    content: ""; /* Adiciona conteúdo vazio */
+    position: absolute; /* Define posição absoluta */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    bottom: 0; /* Alinha na parte inferior */
+    height: 2px; /* Altura da linha */
+    background-color: rgba(190, 73, 73, 0); /* Cor da linha */
+    transform: scaleX(0); /* Oculta a linha inicialmente */
+    transform-origin: bottom right; /* Origem da animação */
+    transition: transform 0.8s; /* Animação suave */
+  }
+  .mb-4 {
+    color: rgba(255, 255, 255, 0);
+  }
+  .mobile-menu{
+    color: rgb(255, 255, 255);
+  }
+  .mobile-menu nav ul li a {
+    color: #fff !important;
+  }
+  header.scrolled .mobile-menu a {
+    color: #ffffff !important;
+  }
+  .mobile-menu nav ul li a {
+    color: #fff !important;
+  }
+  body.mobile-menu .fas  {
+    color: #ffffff !important;
+  }
+  .mobile-menu .fas {
+    color: rgb(255, 255, 255);
+  }
+  header button .fas{
+    color: #fff !important;
+  }
+  
+  header.scrolled .mobile-menu .fas {
+    color: #ffffff !important;
+  }
+  
+  body.menu-open .mobile-menu .fas {
+    color: #ffffff !important;
+  }
+  
+  /* Animação ao passar o mouse no botão */
+  header button:hover::after {
+    transform: scaleX(1); /* Expande a linha */
+    transform-origin: bottom left; /* Origem da expansão */
+  }
+  
+  /* Estilo dos ícones no cabeçalho */
+  header i {
+    font-size: 20px; /* Tamanho dos ícones */
+    color: rgb(255, 255, 255); /* Cor dos ícones */
+    margin-left: 16px; /* Espaçamento à esquerda */
+  }
+  
+  /* Animação ao passar o mouse nos ícones */
+  header .fa-whatsapp:hover {
+    transition: 1s; /* Transição suave */
+    color: green; /* Cor ao passar o mouse */
+  }
+  header .fa-envelope:hover {
+    transition: 1s; /* Transição suave */
+    color: blue; /* Cor ao passar o mouse */
+  }
+  header .fa-phone:hover {
+    transition: 1s; /* Transição suave */
+    color: rgb(0, 221, 255); /* Cor ao passar o mouse */
+  }
+  /* Estilo para o cabeçalho ao rolar */
+  header.scrolled {
+    background-color: rgba(0, 174, 255, 0); /* Fundo permanece branco */
+    color: rgb(255, 255, 255); /* Texto preto */
+  
+  }
+  header.scorlled .mobile-menu{
+    color: white;
+  }
+  header.scrolled i{
+    color : white; /* Ícones pretos */
+  }
+  header.scrolled nav{
+    background-color: rgb(202, 199, 199);
+    border-radius: 15px;
+    margin-top: -10px;
+  }
+  header.scrolled h3 {
+    color: rgb(255, 255, 255); /* Texto preto */
+  }
+  
+  /* Ajuste para os links no estado inicial */
+  header a {
+    color: rgb(255, 255, 255); /* Texto preto */
+  }
+  
+  /* Ajuste para os links no estado scrolled */
+  header.scrolled a {
+    color: rgb(255, 255, 255); /* Texto preto */
+  }
+  
+  /* Estilo para listas no cabeçalho e rodapé */
+  a {
+    position: relative; /* Define posição relativa */
+    padding: 10px 0; /* Espaçamento interno */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    transition: color 0.3s; /* Transição suave para a cor */
+  }
+  
+  /* Linha oculta inicialmente nos links */
+   a::after {
+    content: ""; /* Adiciona conteúdo vazio */
+    position: absolute; /* Define posição absoluta */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    bottom: 0; /* Alinha na parte inferior */
+    height: 2px; /* Altura da linha */
+    background-color: rgb(0, 204, 255); /* Cor da linha */
+    transform: scaleX(0); /* Oculta a linha inicialmente */
+    transform-origin: bottom right; /* Origem da animação */
+    transition: transform 0.3s; /* Animação suave */
+  }
+  
+  /* Animação ao passar o mouse nos links */
+   a:hover::after {
+    transform: scaleX(1); /* Expande a linha */
+    transform-origin: bottom left; /* Origem da expansão */
+  }
+  
+  /* Estilo do botão de cadastro */
+  header button {
+    color: white; /* Cor do texto */
+    position: relative; /* Define posição relativa */
+    background-color: rgba(0, 0, 0, 0); /* Fundo transparente */
+    border: none; /* Remove borda */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    transition: color 0.3s; /* Transição suave para a cor */
+    border-radius: 10px; /* Bordas arredondadas */
+    width: 7vw; /* Largura do botão */
+    height: 5vh; /* Altura do botão */
+    margin-left: 30px; /* Espaçamento à esquerda */
+  }
+  
+  /* Linha animada no botão */
+  header button::after {
+    content: ""; /* Adiciona conteúdo vazio */
+    position: absolute; /* Define posição absoluta */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    bottom: 0; /* Alinha na parte inferior */
+    height: 2px; /* Altura da linha */
+    background-color: rgba(190, 73, 73, 0); /* Cor da linha */
+    transform: scaleX(0); /* Oculta a linha inicialmente */
+    transform-origin: bottom right; /* Origem da animação */
+    transition: transform 0.8s; /* Animação suave */
+  }
+  
+  /* Animação ao passar o mouse no botão */
+  header button:hover::after {
+    transform: scaleX(1); /* Expande a linha */
+    transform-origin: bottom left; /* Origem da expansão */
+  }
+  
+  /* Estilo dos ícones no cabeçalho */
+  header i {
+    font-size: 20px; /* Tamanho dos ícones */
+    color: white; /* Cor dos ícones */
+    margin-left: 16px; /* Espaçamento à esquerda */
+  }
+  
+  /* Animação ao passar o mouse nos ícones */
+  header .fa-whatsapp:hover {
+    transition: 1s; /* Transição suave */
+    color: green; /* Cor ao passar o mouse */
+  }
+  header .fa-envelope:hover {
+    transition: 1s; /* Transição suave */
+    color: blue; /* Cor ao passar o mouse */
+  }
+  header .fa-phone:hover {
+    transition: 1s; /* Transição suave */
+    color: rgb(0, 221, 255); /* Cor ao passar o mouse */
+  }
+  
+  /* HAMBURGER DO MOBILE */
+  /* =====================================CAIXA MOBILE===================================== */
+  .mobile-menu { /*Estilização da caixa Mobile quando aberta*/
+      display: none; /*Display: Nenhum*/
+      position: fixed; /*Posição fixa na parte direita da página*/
+      top: 0; /*Superior em 0 fazendo a caixa encostar ao topo*/
+      color: white;
+      right: 0; /*Direita em 0 fazendo a caixa encostar a direita*/
+      width: 60%; /*Largura em porcentagem da caixa*/
+      height: 100%; /*Altura de 100% da tela*/
+      background-color: #0b0b0d; /*Cor de fundo*/
+      flex-direction: column; /*direção dos itens dentro da caixa */
+      align-items: center; /*Alinhamento na vertical do itens*/
+      font-size: 1.8rem; /*tamanho da letra dentro da caixa*/
+  }
+  
+  .nav-links-mobile { /*Lista não ordenada da versão mobile*/
+      display: flex; /*Tornando os itens (LISTAS) flexíveis*/
+      flex-direction: column; /*Estamos direcionando o posicionamento dessas listas*/
+      text-align: center; /*Alinhando o texto ao centro*/
+      gap: 1.2rem; /*Espaço entre as listas */
+      list-style: none; /*Estilo de lista desabilitado*/
+  }
+  
+  .nav-links-mobile li { /*listas da versão Mobile*/
+      border-bottom: 1px solid #787272; /*Bordar inferior de cada lista*/
+      padding-bottom: 1.2rem; /*Tamanho da borda*/
+  }
+  
+  
+  .hamburger,
+  .close {
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      display: none;
+      margin-right: 20px;
+  }
+  
+  
+  .close {
+      margin-top: 20px;
+      margin-right: 20px;
+      display: block;
+      align-self: end;
+  }
+  
+  
+  .flex {
+      display: flex;
+  }
+  
+#mra_app
+{
+    padding-bottom: 90px;
+}
+
+/** Start Section Header Bar Style **/
+
+#mra_header_bar
+{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.9);
+    padding: 30px 25px;
+    background-color: #fff;
+}
+
+#mra_header_bar .mra_header_icon
+{
+    text-align: right;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(0,0,0,0.4);
+}
+
+/** End Section Header Bar Style **/
+
+/** Start Section Months Bar Style **/
+
+#mra_months_bar
+{
+    position: relative;
+    background-color: #fff;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+#mra_months_bar .row > div
+{
+    padding: 0;
+}
+
+#mra_months_bar ul
+{
+    padding: 0;
+}
+
+#mra_months_bar ul li
+{
+    list-style: none;
+    font-size: 9px;
+    padding: 6px 0;
+    font-weight: 600;
+    float: left;
+    width: calc(100%/7);
+    text-align: center;
+    color: rgba(0,0,0,0.6);
+}
+
+#mra_months_bar:before
+{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background: rgba(255,255,255,1);
+    top: 0;
+    margin-left: -30px;
+    z-index: 1;
+    filter: blur(4px);
+    box-shadow: 10px 0 8px rgba(255,2555,255,1);
+    opacity: 0.95;
+}
+
+#mra_months_bar:after
+{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    background: rgba(255,255,255,1);
+    top: 0;
+    right: 0;
+    margin-right: -15px;
+    z-index: 1;
+    filter: blur(4px);
+    box-shadow: -10px 0 8px rgba(255,2555,255,1);
+    opacity: 0.95;
+}
+
+#mra_months_bar ul li.active
+{
+    background: rgba(9,16,255,0.08);
+    border-radius: 6px;
+    color: rgba(9,16,255, 1);
+}
+
+/** End Section Months Bar Style **/
+
+/** Start Section Date Bar Style **/
+
+#mra_date_bar
+{
+    position: relative;
+    background-color: #fff;
+    padding-bottom: 20px;
+    padding-top: 15px; 
+    border-radius: 0 0 30px 30px;
+}
+
+#mra_date_bar ul
+{
+    padding: 0;
+}
+
+#mra_date_bar ul li
+{
+    list-style: none;
+    float: left;
+    width: calc(100%/6);
+    text-align: center;
+}
+
+#mra_date_bar ul li div
+{
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    margin: 14px 0px;
+    padding: 15px 0;
+    background-color: #f5f6fa;
+    border-radius: 8px;
+}
+
+#mra_date_bar ul li span
+{
+    display: block;
+}
+
+#mra_date_bar ul li span.date
+{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#mra_date_bar ul li span.day
+{
+    font-size: 10px;
+    font-weight: 400;
+    color: rgba(0,0,0,0.5);
+}
+
+#mra_date_bar ul li.active div
+{
+    background: rgba(9,16,255,1);
+    color: rgba(255,255,255,1);
+}
+
+#mra_date_bar ul li.active span.day
+{
+    color: rgba(255,255,255,0.8);
+}
+
+#mra_date_bar ul li span.medicines
+{
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    transform: translateY(-60%);
+}
+
+#mra_date_bar ul li span.medicines span
+{
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+}
+
+#mra_date_bar ul li.active span.medicines span
+{
+    border: 1px solid rgba(255,255,255,0.9);
+}
+
+#mra_date_bar ul li span.medicines span.color-violet
+{
+    background-color: #a600f8;
+}
+
+#mra_date_bar ul li span.medicines span.color-orange
+{
+    background-color: #fd780b;
+}
+
+#mra_date_bar ul li span.medicines span.color-green
+{
+    background-color: #0ee36f;
+}
+
+/** End Section Date Bar Style **/
+
+/** Start Section Body Style **/
+
+#mra_body
+{
+    margin-top: 20px;
+}
+
+#mra_body .mra_body_header
+{
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0px 10px;
+}
+
+#mra_body .mra_body_header select
+{
+    float: right;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(9,16,255,1);
+    background-color: rgba(9,16,255,0.08);
+    padding: 5px;
+    border-radius: 8px;
+    margin-top: -5px;
+}
+
+#mra_body .mra_body_data
+{
+    padding: 0 10px;
+}
+
+#mra_body .row:nth-child(2)
+{
+    margin-top: 15px;
+}
+
+#mra_body .mra_body_data ul
+{
+    padding: 0;
+}
+
+#mra_body .mra_body_data ul li
+{
+    list-style: none;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 20px 0;
+    color: rgba(0,0,0,0.4);
+}
+
+.mra_body_data .medicine_info
+{
+    position: relative;
+    background-color: #fff;
+    height: 90%;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.mra_body_data .medicine_info > span
+{
+    float: left;
+}
+
+.mra_body_data .medicine_info .m_icon
+{
+    padding: 10px;
+    margin-right: 20px;
+    display: inline-block;
+    height: 100%;
+    border-radius: inherit;
+}
+
+.mra_body_data .medicine_info .m_icon img
+{
+    width: 25px;
+}
+
+.mra_body_data .medicine_info .m_info
+{
+    display: inline-block;
+    padding-top: 5px;
+}
+
+.mra_body_data .medicine_info .m_info > span
+{
+    display: block;
+}
+
+.mra_body_data .medicine_info .m_info span.m_name
+{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.9);
+}
+
+.mra_body_data .medicine_info .m_info span.m_dosage
+{
+    font-size: 11.5px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.4);
+    margin-top: 1px;
+}
+
+.mra_body_data .medicine_info .m_info span.m_time
+{
+    position: absolute;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: rgba(0,0,0,0.4);   
+    bottom: 0;
+    margin-bottom: 25px;
+}
+
+.mra_body_data .medicine_info .m_status
+{
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 39px;
+    text-align: center;
+    color: rgba(0,0,0,0.25);
+    border: 1.5px dashed rgba(0,0,0,0.15);
+    border-radius: inherit;
+}
+
+.mra_body_data .medicine_info .m_status.true
+{
+    background-color: rgba(14,227,111,0.15);
+    color: rgba(14,227,111,1);
+    border: 1px dashed rgba(0,0,0,0);
+}
+
+
+#mra_body .col-3
+{
+    flex: 0 0 21%;
+    max-width: 21%;
+}
+
+#mra_body .col-9
+{
+    flex: 0 0 79%;
+    max-width: 79%;
+    padding-left: 0;
+}
+
+.mra_body_data ul li:first-child
+{
+    border-radius: 0 25px 0 0;
+}
+
+.mra_body_data ul li:last-child
+{
+    border-radius: 0 0 25px 0;
+}
+
+.mra_body_data.color-violet .medicine_info .m_icon
+{
+    background-color: rgba(166,0,248,0.15);
+}
+
+.mra_body_data.color-orange .medicine_info .m_icon
+{
+    background-color: rgba(253,120,11,0.15);
+}
+
+/** End Section Body Style **/
+
+/** Start Section Footer Style **/
+
+#mra_footer
+{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 20px 25px;
+    background-color: #fff;
+    border-radius: 30px 30px 0 0;
+    /** This box shadow property should be written in last **/
+    box-shadow: 0 -40px 20px -40px rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+#mra_footer ul li span
+{
+    margin-left: 3.5px; 
+}
+
+#mra_footer ul li:not(.active) span
+{
+    display: none;
+}
+
+#mra_footer ul
+{
+    padding: 0;
+}
+
+#mra_footer ul li
+{
+    list-style: none;
+    float: left;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#mra_footer ul li i
+{
+    font-size: 12.5px;
+    font-weight: bold;
+}
+
+#mra_footer ul li.active
+{
+    width: calc(100%/2);
+    background: rgba(9,16,255,0.08);
+    border-radius: 100px;
+    color: rgba(9,16,255, 1);
+}
+
+#mra_footer ul li:not(.active)
+{
+    width: calc(100%/6);
+    color: rgba(0,0,0,0.9);
+}
+
+.btnAdd
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 80px;
+    margin-right: 10px;
+    background-color: rgba(9,16,255, 1);
+    color: #fff;
+    box-shadow: 10px 10px 15px -5px rgba(9,16,255, 0.3);
+}
+
+
+/** End Section Footer Style **/

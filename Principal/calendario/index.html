@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <!-- Script para carregar os ícones da biblioteca FontAwesome -->
+    <script src="https://kit.fontawesome.com/b61a4ed80b.js"
+      crossorigin="anonymous"></script>
+
+    <!-- Define o ícone (favicon) que aparece na aba do navegador -->
+    <link rel="shortcut icon" href="img/Logo da empresa (fundo removido)io.png"
+      type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intermed Data Center</title>
+</head>
+<body>
+<!-- Cabeçalho do site -->
+<header class="cabeçalho">
+
+    <nav>
+
+      <!-- FINAL -->
+      <!-- Logotipo da empresa -->
+      <!-- Nome da empresa -->
+      <h3>Intermed Center</h3>
+      <!-- Links de navegação para diferentes seções do site -->
+      <div class="conteudo">
+        <a href="../index.html">Principal</a>
+        <a href="../educação/index.html">Educação</a>
+        <a href="../prot-mulher/index.html">Proteção Feminina</a>
+        <a href="../emergencia/index.html">Emergencia</a>
+        <a href="../junte-se/index.html">Junte-se</a>
+      </div>
+      <!-- Ícones de contato (WhatsApp, email e telefone) -->
+      <div class="conteudo">
+        <a href><i class="fa-brands fa-whatsapp"></i></a>
+        <a href><i class="fa-solid fa-envelope"></i></a>
+        <a href><i class="fa-solid fa-phone"></i></a>
+        <a href="casatros/index.html"><i class="fa-solid fa-circle-user"></i></a>
+      </div>
+
+      <!-- CAIXA MOBILE -->
+      <div class="mobile-menu" id="mobileMenu">
+
+        <!-- Botão para ser utilizado para fechamento da lista -->
+        <button id="closeButton" class="close">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <!-- Essa lista é do Menu Hamburguer quando estiver aberto. -->
+        <ul class="nav-links-mobile">
+          <li><a href="../educação/index.html">Educação</a></li>
+          <li> <a href="../prot-mulher/index.html">Proteção Feminina</a></li>
+          <li> <a href="../emergencia/index.html">Emergencia</a></li>
+          <li> <a href="../junte-se/index.html">Junte-se</a></li>
+          <li><a href="casatros/index.html">Cadatre-se <i class="fa-solid fa-circle-user"></i></a></li>
+        </ul>
+
+        <!-- Fim da caixa do Menu Hamburguer (Quando estiver aberto) -->
+      </div>
+
+      <!-- Botão de Hamburguer, ele está fora da Div justamente por ser um elemento singular -->
+      <button class="hamburger" id="hamburgerButton">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- FINAL -->
+
+      <!-- FINAL -->
+
+    </nav>
+  </header>
+
+
+    <div class="container-fluid">
+        <div id="mra_app" class="row">
+          <!-- Start Section Header Bar -->
+          <section id="mra_header_bar" class="col-12">
+            <div class="row">
+              <div class="col-8 mra_header_title">
+              </div>
+              <div class="col-4 mra_header_icon">
+              </div>
+            </div>
+          </section>
+          <!-- End Section Header Bar -->
+      
+          <!-- Start Section Months Bar -->
+          <section id="mra_months_bar" class="col-12">
+            <div class="row">
+              <div class="col-12">
+                <ul>
+                  <li>Outubro</li>
+                  <li>Novembro</li>
+                  <li class="active">Dezembro</li>
+                  <li>Janeiro</li>
+                  <li>Fevereiro</li>
+                  <li>Março</li>
+                  <li>Abril</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- End Section Months Bar -->
+      
+          <!-- Start Section Months Bar -->
+          <section id="mra_date_bar" class="col-12">
+            <div class="row">
+              <div class="col-12">
+                <ul>
+                  <li>
+                    <div>
+                      <span class="medicines">
+                        <span class="color-orange"></span>
+                      </span>
+                      <span class="date">01</span>
+                      <span class="day">Seg</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <span class="medicines">
+                        <span class="color-violet"></span>
+                        <span class="color-orange"></span>
+                      </span>
+                      <span class="date">02</span>
+                      <span class="day">Ter</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <span class="date">03</span>
+                      <span class="day">Qua</span>
+                    </div>
+                  </li>
+                  <li class="active">
+                    <div>
+                      <span class="medicines">
+                        <span class="color-violet"></span>
+                        <span class="color-orange"></span>
+                      </span>
+                      <span class="date">04</span>
+                      <span class="day">Qui</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <span class="medicines">
+                        <span class="color-orange"></span>
+                      </span>
+                      <span class="date">05</span>
+                      <span class="day">Sex</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div>
+                      <span class="medicines">
+                        <span class="color-green"></span>
+                      </span>
+                      <span class="date">06</span>
+                      <span class="day">Sab</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- End Section Months Bar -->
+      
+          <!-- Start Section Body -->
+      
+          <section id="mra_body" class="col-12">
+            <div class="row mra_body_header">
+              <div class="col-3">
+                Horários
+              </div>
+              <div class="col-9">
+                Medicamento
+                <select name="medicine">
+                  <option value="0">Todos</option>
+                </select>
+              </div>
+            </div>
+            <div class="row mra_body_data color-violet">
+              <div class="col-3">
+                <ul>
+                  <li>8:00</li>
+                  <li>8:30</li>
+                  <li>9:00</li>
+                </ul>
+              </div>
+              <div class="col-9">
+                <div class="medicine_info">
+                  <span class="m_info">
+                    <span class="m_name">Naproxen</span>
+                    <span class="m_dosage">3 piils (10mg)</span>
+                    <span class="m_time">
+                      <i class="fa fa-clock-o"></i>&nbsp; 08:00 - 09:00
+                    </span>
+                  </span>
+                  <span class="m_status true">
+                    <i class="fa fa-check"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="row mra_body_data color-orange">
+              <div class="col-3">
+                <ul>
+                  <li>9:30</li>
+                  <li>10:00</li>
+                  <li>10:30</li>
+                  <li>11:00</li>
+                </ul>
+              </div>
+              <div class="col-9">
+                <div class="medicine_info">
+                  <span class="m_info">
+                    <span class="m_name">Insulin</span>
+                    <span class="m_dosage">1 injection (8ml)</span>
+                    <span class="m_time">
+                      <i class="fa fa-clock-o"></i>&nbsp; 09:00 - 11:00
+                    </span>
+                  </span>
+                  <span class="m_status false">
+                    <i class="fa fa-check"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+          <!-- End Section Body -->
+      
+          <!-- Start Section Footer -->
+      
+          <section id="mra_footer" class="col-12">
+            <div class="row">
+              <div class="col-12">
+                <ul>
+                  <li class="active">
+                    <i class="fa fa-bell-o"></i>
+                    <span>Reminders</span>
+                  </li>
+                  <li>
+                    <i class="fa fa-cog"></i>
+                    <span>Settings</span>
+                  </li>
+                  <li>
+                    <i class="fa fa-user-md"></i>
+                    <span>Treatments</span>
+                  </li>
+                  <li>
+                    <i class="fa fa-user-o"></i>
+                    <span>My Account</span>
+                  </li>
+                </ul>
+                <button class="btn btn-default btn-lg btnAdd" type="button">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </section>
+      
+          <!-- End Section Footer -->
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+     
+</body>
+</html>

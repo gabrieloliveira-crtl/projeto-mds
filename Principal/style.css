@@ -329,6 +329,94 @@ body.menu-open .hamburger {
   justify-content: space-between; /* Distribui os itens uniformemente */
 }
 
+/* ===========================================SESSÃO2====================================== */
+.topicos {
+  width: 100%;
+  padding: 8rem;
+  background: linear-gradient(180deg, #ffffffe2 8.33%, #ffffffe9 100%), url(img/Design\ sem\ nome.png);
+  margin-top: -75px;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+
+
+.container {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+max-width: 1200px;
+margin: auto;
+}
+
+.text-content {
+flex: 1;
+padding-right: 40px;
+}
+
+.text-content h1 {
+font-size: 2.8rem;
+line-height: 1.2;
+margin-bottom: 20px;
+}
+
+.text-content h1 span {
+color: #04788d;
+}
+
+.text-content p {
+color: #666;
+font-size: 1rem;
+margin-bottom: 20px;
+max-width: 400px;
+}
+
+.text-content button {
+background: #333;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 25px;
+cursor: pointer;
+font-size: 1rem;
+}
+
+.image-layout {
+display: flex;
+gap: 20px;
+}
+
+.left-image {
+width: 300px;
+height: 400px;
+background-color: #ccc;
+border-radius: 15px;
+background-image: url('img/imagemum.jpg');
+background-size: cover;
+background-position: center;
+}
+
+.right-images {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.small-image {
+width: 150px;
+height: 190px;
+background-color: #ccc;
+border-radius: 15px;
+background-image: url('img/imagemdois.jpg');
+background-size: cover;
+background-position: center;
+}
+.small-image2{
+background-image: url(img/imagemtres.jpg);
+}
+ 
+
 /* Estilo do texto na segunda seção */
 .sect2 #texto {
   width: 28rem; /* Largura do texto */
@@ -351,19 +439,8 @@ body.menu-open .hamburger {
   flex-direction: column;
 }
 
-.sect3{
-  padding: 6rem; /* Espaçamento interno */
-  background-color: rgb(255, 255, 255); /* Cor de fundo */
-  display: flex; /* Define layout flexível */
-  text-align: center; /* Centraliza o texto */
-  gap: 100px; /* Espaçamento entre os itens */
-  /* Distribui os itens uniformemente */
-}
 
-.sect3 .card{
-  border: none !important; /* Remove borda */
-  box-shadow: none !important;
-}
+
 .card{
   width: 480px;
   flex-wrap: wrap;
